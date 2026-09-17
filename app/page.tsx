@@ -20,6 +20,7 @@ export default function HomePage() {
       counts[lesson.id] = {
         mcq: getQuestions(lesson.id).length,
         tf: extra?.tf?.length ?? 0,
+        shortAnswer: extra?.shortAnswer?.length ?? 0,
         essay: extra?.essay?.length ?? 0,
         theory: hasTheory(lesson.id),
       };

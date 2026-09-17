@@ -120,5 +120,29 @@ export const questions: Question[] = [
     ],
     "answer": 0,
     "explain": "Đạo hàm của hằng số C bằng 0 nên ∫ 0 dx = C."
+  },
+  {
+    "id": "q_bai-11_11",
+    "q": "Họ nguyên hàm của hàm số f(x) = e^(2x) là:",
+    "options": [
+      "(1/2)*e^(2x) + C",
+      "2*e^(2x) + C",
+      "e^(2x) + C",
+      "e^(x) + C"
+    ],
+    "answer": 0,
+    "explain": "int e^(ax) dx = (1/a)*e^(ax) + C => (1/2)*e^(2x) + C."
+  },
+  {
+    "id": "q_bai-11_12",
+    "q": "Tìm họ nguyên hàm F(x) của f(x) = 2x - 3 biết F(1) = 2.",
+    "options": [
+      "F(x) = x^2 - 3x + 4",
+      "F(x) = x^2 - 3x",
+      "F(x) = x^2 - 3x + 2",
+      "F(x) = 2x^2 - 3x + 3"
+    ],
+    "answer": 0,
+    "explain": "F(x) = x^2 - 3x + C. F(1) = 1 - 3 + C = 2 <=> C - 2 = 2 <=> C = 4 => F(x) = x^2 - 3x + 4."
   }
 ];

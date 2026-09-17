@@ -120,5 +120,29 @@ export const questions: Question[] = [
     ],
     "answer": 0,
     "explain": "Công thức thể tích hình nón V = 1/3 π r² h."
+  },
+  {
+    "id": "q_bai-13_11",
+    "q": "Diện tích hình phẳng giới hạn bởi đồ thị hàm số y = x^2, trục hoành và hai đường thẳng x = 0, x = 3 bằng:",
+    "options": [
+      "9",
+      "3",
+      "27",
+      "18"
+    ],
+    "answer": 0,
+    "explain": "S = int_0^3 x^2 dx = [x^3 / 3]_0^3 = 27 / 3 = 9."
+  },
+  {
+    "id": "q_bai-13_12",
+    "q": "Thể tích khối tròn xoay tạo thành khi quay hình phẳng giới hạn bởi y = sqrt(x), trục Ox và hai đường thẳng x = 0, x = 4 quanh trục Ox là:",
+    "options": [
+      "8*pi",
+      "4*pi",
+      "16*pi",
+      "2*pi"
+    ],
+    "answer": 0,
+    "explain": "V = pi * int_0^4 (sqrt(x))^2 dx = pi * int_0^4 x dx = pi * [x^2 / 2]_0^4 = 8*pi."
   }
 ];

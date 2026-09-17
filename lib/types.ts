@@ -29,6 +29,7 @@ export type EssayQuestion = {
 
 export type LessonExtra = {
   tf: TFQuestion[];
+  shortAnswer?: ShortAnswerQuestion[];
   essay: EssayQuestion[];
 };
 
@@ -80,6 +81,7 @@ export type LessonTheory = {
 export type LessonCounts = {
   mcq: number;
   tf: number;
+  shortAnswer?: number;
   essay: number;
   theory: boolean;
 };

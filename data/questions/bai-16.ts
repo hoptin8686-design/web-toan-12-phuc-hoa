@@ -120,5 +120,29 @@ export const questions: Question[] = [
     ],
     "answer": 0,
     "explain": "Cosin góc giữa 2 mặt phẳng bằng trị tuyệt đối tích vô hướng chia tích độ dài 2 VTPT."
+  },
+  {
+    "id": "q_bai-16_11",
+    "q": "Tính góc giữa hai mặt phẳng (P): x + y - 2 = 0 và (Q): y + z + 1 = 0.",
+    "options": [
+      "60 độ",
+      "45 độ",
+      "30 độ",
+      "90 độ"
+    ],
+    "answer": 0,
+    "explain": "n1 = (1; 1; 0), n2 = (0; 1; 1). cos = |1*0 + 1*1 + 0*1| / (sqrt(2)*sqrt(2)) = 1/2 => góc = 60 độ."
+  },
+  {
+    "id": "q_bai-16_12",
+    "q": "Tính góc giữa đường thẳng d có VTCP u = (1; 1; 0) và trục Oz.",
+    "options": [
+      "90 độ",
+      "0 độ",
+      "45 độ",
+      "60 độ"
+    ],
+    "answer": 0,
+    "explain": "VTCP của Oz là k = (0; 0; 1). u . k = 1*0 + 1*0 + 0*1 = 0 => vuông góc (90 độ)."
   }
 ];

@@ -1,4 +1,4 @@
-import type { LessonExtra, TFQuestion, EssayQuestion } from "./types";
+import type { LessonExtra, TFQuestion, EssayQuestion, ShortAnswerQuestion } from "./types";
 import { extra as bai01Extra } from "@/data/extra/bai-01";
 import { extra as bai02Extra } from "@/data/extra/bai-02";
 import { extra as bai03Extra } from "@/data/extra/bai-03";
@@ -63,4 +63,8 @@ export function getTF(lessonId: string): TFQuestion[] {
 
 export function getEssay(lessonId: string): EssayQuestion[] {
   return EXTRA_BANK[lessonId]?.essay ?? [];
+}
+
+export function getShortAnswer(lessonId: string): ShortAnswerQuestion[] {
+  return EXTRA_BANK[lessonId]?.shortAnswer ?? [];
 }

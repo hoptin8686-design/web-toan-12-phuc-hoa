@@ -120,5 +120,29 @@ export const questions: Question[] = [
     ],
     "answer": 0,
     "explain": "Tập AB là tập con của A nên P(AB) <= P(A)."
+  },
+  {
+    "id": "q_bai-18_11",
+    "q": "Cho hai biến cố A và B độc lập với nhau, P(A) = 0.4 và P(B) = 0.5. Tính xác suất P(AB).",
+    "options": [
+      "0.2",
+      "0.9",
+      "0.1",
+      "0.8"
+    ],
+    "answer": 0,
+    "explain": "Hai biến cố độc lập nên P(AB) = P(A) * P(B) = 0.4 * 0.5 = 0.2."
+  },
+  {
+    "id": "q_bai-18_12",
+    "q": "Cho P(B) = 0.6 và P(A|B) = 0.7. Xác suất P(AB) bằng:",
+    "options": [
+      "0.42",
+      "0.13",
+      "0.76",
+      "0.85"
+    ],
+    "answer": 0,
+    "explain": "Theo công thức nhân xác suất: P(AB) = P(B) * P(A|B) = 0.6 * 0.7 = 0.42."
   }
 ];

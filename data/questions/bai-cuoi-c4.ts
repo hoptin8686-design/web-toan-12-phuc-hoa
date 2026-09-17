@@ -60,5 +60,89 @@ export const questions: Question[] = [
     ],
     "answer": 0,
     "explain": "Mục tiêu nắm vững chuyên đề với tỷ lệ đúng >= 80%."
+  },
+  {
+    "id": "q_bai-cuoi-c4_06",
+    "q": "Họ nguyên hàm của hàm số f(x) = 1/(3x - 1) là:",
+    "options": [
+      "(1/3)*ln|3x - 1| + C",
+      "ln|3x - 1| + C",
+      "3*ln|3x - 1| + C",
+      "-1/(3x - 1)^2 + C"
+    ],
+    "answer": 0,
+    "explain": "int 1/(ax + b) dx = (1/a)*ln|ax + b| + C => (1/3)*ln|3x - 1| + C."
+  },
+  {
+    "id": "q_bai-cuoi-c4_07",
+    "q": "Tính tích phân I = int_0^1 e^x dx.",
+    "options": [
+      "e - 1",
+      "e",
+      "e + 1",
+      "1"
+    ],
+    "answer": 0,
+    "explain": "I = [e^x]_0^1 = e^1 - e^0 = e - 1."
+  },
+  {
+    "id": "q_bai-cuoi-c4_08",
+    "q": "Cho int_0^3 f(x) dx = 4 và int_0^3 g(x) dx = 2. Tính int_0^3 [f(x) - 2*g(x)] dx.",
+    "options": [
+      "0",
+      "2",
+      "8",
+      "-4"
+    ],
+    "answer": 0,
+    "explain": "int_0^3 [f(x) - 2g(x)] dx = 4 - 2*2 = 0."
+  },
+  {
+    "id": "q_bai-cuoi-c4_09",
+    "q": "Diện tích hình phẳng giới hạn bởi y = x^3, trục Ox và x = 0, x = 2 bằng:",
+    "options": [
+      "4",
+      "8",
+      "16",
+      "2"
+    ],
+    "answer": 0,
+    "explain": "S = int_0^2 x^3 dx = [x^4 / 4]_0^2 = 16 / 4 = 4."
+  },
+  {
+    "id": "q_bai-cuoi-c4_10",
+    "q": "Tính thể tích khối tròn xoay khi quay hình phẳng giới hạn bởi y = 2, y = 0, x = 0, x = 3 quanh trục Ox.",
+    "options": [
+      "12*pi",
+      "6*pi",
+      "18*pi",
+      "36*pi"
+    ],
+    "answer": 0,
+    "explain": "Hình trụ có R = 2, h = 3 => V = pi * R^2 * h = pi * 4 * 3 = 12*pi."
+  },
+  {
+    "id": "q_bai-cuoi-c4_11",
+    "q": "Một nguyên hàm F(x) của hàm số f(x) = 2x thoả mãn F(0) = 5 là:",
+    "options": [
+      "F(x) = x^2 + 5",
+      "F(x) = x^2",
+      "F(x) = x^2 - 5",
+      "F(x) = 2x^2 + 5"
+    ],
+    "answer": 0,
+    "explain": "F(x) = x^2 + C. F(0) = 5 => C = 5 => F(x) = x^2 + 5."
+  },
+  {
+    "id": "q_bai-cuoi-c4_12",
+    "q": "Cho hàm số f(x) liên tục trên R và F(x) là một nguyên hàm. Khẳng định nào sau đây đúng?",
+    "options": [
+      "int_a^b f(x) dx = F(b) - F(a)",
+      "int_a^b f(x) dx = F(a) - F(b)",
+      "int_a^b f(x) dx = F'(b) - F'(a)",
+      "int_a^b f(x) dx = f(b) - f(a)"
+    ],
+    "answer": 0,
+    "explain": "Công thức định nghĩa tích phân Newton-Leibniz: int_a^b f(x) dx = F(b) - F(a)."
   }
 ];

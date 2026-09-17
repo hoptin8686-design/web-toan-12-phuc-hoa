@@ -120,5 +120,29 @@ export const questions: Question[] = [
     ],
     "answer": 0,
     "explain": "Ba vectơ không đồng phẳng khi và chỉ khi không tồn tại bộ số m, n để c = ma + nb."
+  },
+  {
+    "id": "q_bai-06_11",
+    "q": "Cho tứ diện ABCD. Gọi G là trọng tâm tứ diện. Đẳng thức vectơ nào sau đây đúng?",
+    "options": [
+      "vecto(GA) + vecto(GB) + vecto(GC) + vecto(GD) = vecto(0)",
+      "vecto(GA) + vecto(GB) + vecto(GC) = vecto(GD)",
+      "vecto(GA) + vecto(GB) = vecto(GC) + vecto(GD)",
+      "vecto(AB) + vecto(CD) = vecto(0)"
+    ],
+    "answer": 0,
+    "explain": "Theo định nghĩa trọng tâm của tứ diện ABCD, tổng 4 vectơ từ G đến 4 đỉnh bằng vectơ không."
+  },
+  {
+    "id": "q_bai-06_12",
+    "q": "Cho hình hộp ABCD.A'B'C'D'. Khẳng định nào sau đây SAI?",
+    "options": [
+      "vecto(AB) + vecto(AD) + vecto(AA') = vecto(AC')",
+      "vecto(AC) + vecto(BA') = vecto(BC')",
+      "vecto(AB) + vecto(BC) = vecto(AC)",
+      "vecto(AA') + vecto(CC') = vecto(0)"
+    ],
+    "answer": 3,
+    "explain": "vecto(AA') và vecto(CC') là 2 vectơ cùng hướng, cùng độ dài nên tổng của chúng bằng 2*vecto(AA') ≠ vecto(0)."
   }
 ];

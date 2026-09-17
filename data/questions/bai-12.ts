@@ -120,5 +120,29 @@ export const questions: Question[] = [
     ],
     "answer": 0,
     "explain": "Từng phần: u = x, dv = e^x dx => x e^x|_0^1 - ∫_0^1 e^x dx = e - (e - 1) = 1."
+  },
+  {
+    "id": "q_bai-12_11",
+    "q": "Tính tích phân I = int_0^1 (3x^2 + 2x) dx.",
+    "options": [
+      "2",
+      "1",
+      "3",
+      "5"
+    ],
+    "answer": 0,
+    "explain": "I = [x^3 + x^2]_0^1 = (1 + 1) - 0 = 2."
+  },
+  {
+    "id": "q_bai-12_12",
+    "q": "Cho int_0^2 f(x) dx = 3 và int_2^5 f(x) dx = 7. Tính int_0^5 f(x) dx.",
+    "options": [
+      "10",
+      "4",
+      "-4",
+      "21"
+    ],
+    "answer": 0,
+    "explain": "int_0^5 f(x) dx = int_0^2 f(x) dx + int_2^5 f(x) dx = 3 + 7 = 10."
   }
 ];

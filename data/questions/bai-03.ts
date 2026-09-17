@@ -120,5 +120,29 @@ export const questions: Question[] = [
     ],
     "answer": 0,
     "explain": "Chia đa thức: (2x^2 + 3x + 1) = (x + 2)(2x - 1) + 3 => TCX: y = 2x - 1."
+  },
+  {
+    "id": "q_bai-03_11",
+    "q": "Đồ thị hàm số y = (x^2 - 3x + 2)/(x - 1) có đường tiệm cận đứng là:",
+    "options": [
+      "Không có tiệm cận đứng",
+      "x = 1",
+      "x = 2",
+      "y = 1"
+    ],
+    "answer": 0,
+    "explain": "y = (x - 1)(x - 2)/(x - 1) = x - 2 khi x ≠ 1. Khi x -> 1 thì y -> -1 (hữu hạn) nên không có TCĐ."
+  },
+  {
+    "id": "q_bai-03_12",
+    "q": "Tìm phương trình đường tiệm cận xiên của đồ thị hàm số y = (2x^2 - 3x + 1)/(x - 1).",
+    "options": [
+      "y = 2x - 1",
+      "y = 2x + 1",
+      "y = x - 1",
+      "y = 2x"
+    ],
+    "answer": 0,
+    "explain": "Thực hiện phép chia đa thức: 2x^2 - 3x + 1 = (2x - 1)(x - 1). Khi x ≠ 1, y = 2x - 1 là đường thẳng."
   }
 ];

@@ -120,5 +120,29 @@ export const questions: Question[] = [
     ],
     "answer": 0,
     "explain": "Theo BĐT Cô-si: x + 1/x >= 2. Dấu bằng khi x = 1."
+  },
+  {
+    "id": "q_bai-02_11",
+    "q": "Giá trị nhỏ nhất của hàm số y = x + 4/x trên đoạn [1; 3] bằng:",
+    "options": [
+      "4",
+      "5",
+      "13/3",
+      "2"
+    ],
+    "answer": 0,
+    "explain": "y' = 1 - 4/x^2 = 0 <=> x = 2 thuộc [1; 3]. y(1) = 5, y(2) = 4, y(3) = 13/3. Min = 4 tại x = 2."
+  },
+  {
+    "id": "q_bai-02_12",
+    "q": "Tìm giá trị lớn nhất M của hàm số y = sqrt(4 - x^2).",
+    "options": [
+      "M = 2",
+      "M = 4",
+      "M = 0",
+      "M = 16"
+    ],
+    "answer": 0,
+    "explain": "Tập xác định [-2; 2]. 4 - x^2 <= 4 => sqrt(4 - x^2) <= 2. Dấu bằng xảy ra khi x = 0."
   }
 ];

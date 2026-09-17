@@ -60,5 +60,89 @@ export const questions: Question[] = [
     ],
     "answer": 0,
     "explain": "Mục tiêu nắm vững chuyên đề với tỷ lệ đúng >= 80%."
+  },
+  {
+    "id": "q_bai-cuoi-c2_06",
+    "q": "Cho A(1; 2; 3), B(-1; 0; 1). Toạ độ vectơ vecto(BA) là:",
+    "options": [
+      "(2; 2; 2)",
+      "(-2; -2; -2)",
+      "(0; 2; 4)",
+      "(0; 1; 2)"
+    ],
+    "answer": 0,
+    "explain": "vecto(BA) = (1 - (-1); 2 - 0; 3 - 1) = (2; 2; 2)."
+  },
+  {
+    "id": "q_bai-cuoi-c2_07",
+    "q": "Khoảng cách từ điểm M(1; -2; 2) đến gốc toạ độ O là:",
+    "options": [
+      "3",
+      "9",
+      "sqrt(5)",
+      "1"
+    ],
+    "answer": 0,
+    "explain": "OM = sqrt(1^2 + (-2)^2 + 2^2) = sqrt(1 + 4 + 4) = 3."
+  },
+  {
+    "id": "q_bai-cuoi-c2_08",
+    "q": "Tìm toạ độ hình chiếu của M(3; -4; 5) trên trục Oy.",
+    "options": [
+      "(0; -4; 0)",
+      "(3; 0; 0)",
+      "(0; 0; 5)",
+      "(3; 0; 5)"
+    ],
+    "answer": 0,
+    "explain": "Chiếu lên Oy thì x = 0, z = 0, giữ nguyên y = -4."
+  },
+  {
+    "id": "q_bai-cuoi-c2_09",
+    "q": "Cho vecto(a) = (1; 2; 3), vecto(b) = (2; -1; 0). Tính vecto(u) = 2*vecto(a) - vecto(b).",
+    "options": [
+      "(0; 5; 6)",
+      "(4; 3; 6)",
+      "(0; 3; 6)",
+      "(4; 5; 6)"
+    ],
+    "answer": 0,
+    "explain": "2a - b = (2*1 - 2; 2*2 - (-1); 2*3 - 0) = (0; 5; 6)."
+  },
+  {
+    "id": "q_bai-cuoi-c2_10",
+    "q": "Cho tứ diện ABCD có G là trọng tâm tứ diện. Đẳng thức vectơ nào sau đây đúng?",
+    "options": [
+      "vecto(GA) + vecto(GB) + vecto(GC) + vecto(GD) = vecto(0)",
+      "vecto(GA) + vecto(GB) + vecto(GC) = vecto(0)",
+      "vecto(AB) + vecto(AC) + vecto(AD) = vecto(AG)",
+      "vecto(GA) = vecto(GB)"
+    ],
+    "answer": 0,
+    "explain": "Định nghĩa chuẩn của trọng tâm tứ diện."
+  },
+  {
+    "id": "q_bai-cuoi-c2_11",
+    "q": "Cho hai điểm A(2; -1; 3) và B(4; 3; 1). Trung điểm I của đoạn AB có toạ độ là:",
+    "options": [
+      "(3; 1; 2)",
+      "(6; 2; 4)",
+      "(1; 2; -1)",
+      "(2; 4; -2)"
+    ],
+    "answer": 0,
+    "explain": "I = ((2+4)/2; (-1+3)/2; (3+1)/2) = (3; 1; 2)."
+  },
+  {
+    "id": "q_bai-cuoi-c2_12",
+    "q": "Tìm m để hai vectơ vecto(u) = (2; 1; -3) và vecto(v) = (m; 2; 4) vuông góc với nhau.",
+    "options": [
+      "m = 5",
+      "m = -5",
+      "m = 2",
+      "m = 10"
+    ],
+    "answer": 0,
+    "explain": "u.v = 2m + 2 - 12 = 0 <=> 2m = 10 <=> m = 5."
   }
 ];

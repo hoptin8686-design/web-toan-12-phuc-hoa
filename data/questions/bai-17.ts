@@ -120,5 +120,29 @@ export const questions: Question[] = [
     ],
     "answer": 0,
     "explain": "Giao tuyến là đường tròn có bán kính r = √(R^2 - d^2)."
+  },
+  {
+    "id": "q_bai-17_11",
+    "q": "Mặt cầu (S): (x - 1)^2 + (y + 2)^2 + (z - 3)^2 = 16 có tâm I và bán kính R là:",
+    "options": [
+      "I(1; -2; 3), R = 4",
+      "I(-1; 2; -3), R = 4",
+      "I(1; -2; 3), R = 16",
+      "I(-1; 2; -3), R = 16"
+    ],
+    "answer": 0,
+    "explain": "(x - a)^2 + (y - b)^2 + (z - c)^2 = R^2 => I(1; -2; 3), R = sqrt(16) = 4."
+  },
+  {
+    "id": "q_bai-17_12",
+    "q": "Phương trình nào sau đây là phương trình của một mặt cầu?",
+    "options": [
+      "x^2 + y^2 + z^2 - 2x + 4y - 6z + 1 = 0",
+      "x^2 + y^2 + z^2 - 2x + 4y - 6z + 20 = 0",
+      "x^2 + y^2 - z^2 - 2x + 1 = 0",
+      "2x^2 + y^2 + z^2 - 4 = 0"
+    ],
+    "answer": 0,
+    "explain": "a=1, b=-2, c=3, d=1 => a^2 + b^2 + c^2 - d = 1 + 4 + 9 - 1 = 13 > 0 nên là mặt cầu."
   }
 ];

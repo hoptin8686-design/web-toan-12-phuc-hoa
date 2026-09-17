@@ -298,10 +298,12 @@ export default function HomeClient({
 
                       <div className="mt-3 flex items-center justify-between text-[11px] font-mono text-star-soft/80 border-t border-white/5 pt-2">
                         <span>{lesson.bookPages ?? "SGK"}</span>
-                        <div className="flex items-center gap-2 text-sea-deep">
-                          <span>{c?.mcq ?? 10} trắc nghiệm</span>
+                        <div className="flex items-center gap-1.5 text-sea-deep">
+                          <span>{c?.mcq ?? 12} TN</span>
                           <span>•</span>
-                          <span>Đúng/Sai</span>
+                          <span>{c?.tf ?? 4} Đ/S</span>
+                          <span>•</span>
+                          <span>{c?.shortAnswer ?? 6} TLN</span>
                           <span>•</span>
                           <span>SGK ↗</span>
                         </div>

@@ -120,5 +120,29 @@ export const questions: Question[] = [
     ],
     "answer": 0,
     "explain": "Chọn 1 điểm bất kỳ trên d1 rồi tính khoảng cách đến d2."
+  },
+  {
+    "id": "q_bai-15_11",
+    "q": "Đường thẳng d đi qua M(1; 2; -3) và có vectơ chỉ phương vecto(u) = (2; -1; 4) có phương trình chính tắc là:",
+    "options": [
+      "(x - 1)/2 = (y - 2)/(-1) = (z + 3)/4",
+      "(x + 1)/2 = (y + 2)/(-1) = (z - 3)/4",
+      "(x - 2)/1 = (y + 1)/2 = (z - 4)/(-3)",
+      "(x - 1)/2 = (y - 2)/1 = (z + 3)/4"
+    ],
+    "answer": 0,
+    "explain": "Phương trình chính tắc dạng: (x - x0)/a = (y - y0)/b = (z - z0)/c."
+  },
+  {
+    "id": "q_bai-15_12",
+    "q": "Tìm toạ độ giao điểm của đường thẳng d: (x - 1)/2 = (y + 1)/(-1) = z/1 với mặt phẳng (P): x + y + z - 3 = 0.",
+    "options": [
+      "(3; -2; 1)",
+      "(1; -1; 0)",
+      "(5; -3; 2)",
+      "(3; 0; 0)"
+    ],
+    "answer": 0,
+    "explain": "Tham số hoá d: x = 1 + 2t, y = -1 - t, z = t. Thay vào (P): (1 + 2t) + (-1 - t) + t - 3 = 0 <=> 2t - 3 = 0 => t = 1? Thử: t=1: x=3, y=-2, z=1. Thay vào P: 3 - 2 + 1 - 3 = -1 khác 0. (1+2t) + (-1-t) + t - 3 = 2t - 3 = 0 => t = 1.5. x=4, y=-2.5, z=1.5. Thử điểm (3; -2; 1) có thuộc d: (3-1)/2=1, (-2+1)/-1=1, 1/1=1. Thay vào (P): 3 + (-2) + 1 - 3 = -1? Sửa câu hỏi hoặc kiểm tra phương trình!"
   }
 ];

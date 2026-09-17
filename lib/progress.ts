@@ -15,6 +15,10 @@ export function tfKey(lessonId: string): string {
   return `${lessonId}:ds`;
 }
 
+export function saKey(lessonId: string): string {
+  return `${lessonId}:sa`;
+}
+
 export function getProgress(): ProgressMap {
   if (typeof window === "undefined") return {};
   try {

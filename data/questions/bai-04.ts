@@ -120,5 +120,29 @@ export const questions: Question[] = [
     ],
     "answer": 0,
     "explain": "Hàm bậc ba có hệ số a < 0."
+  },
+  {
+    "id": "q_bai-04_11",
+    "q": "Tâm đối xứng của đồ thị hàm số bậc ba y = x^3 - 3x^2 + 2 là điểm:",
+    "options": [
+      "I(1; 0)",
+      "I(0; 2)",
+      "I(2; -2)",
+      "I(-1; -2)"
+    ],
+    "answer": 0,
+    "explain": "y'' = 6x - 6 = 0 <=> x = 1, y(1) = 0. Tâm đối xứng của đồ thị hàm bậc ba chính là điểm uốn I(1; 0)."
+  },
+  {
+    "id": "q_bai-04_12",
+    "q": "Đồ thị hàm số y = (2x - 1)/(x + 1) cắt trục tung tại điểm có toạ độ là:",
+    "options": [
+      "(0; -1)",
+      "(1/2; 0)",
+      "(0; 2)",
+      "(-1; 0)"
+    ],
+    "answer": 0,
+    "explain": "Cho x = 0 => y = (0 - 1)/(0 + 1) = -1. Toạ độ giao điểm với Oy là (0; -1)."
   }
 ];

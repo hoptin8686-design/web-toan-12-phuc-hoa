@@ -120,5 +120,29 @@ export const questions: Question[] = [
     ],
     "answer": 0,
     "explain": "Lợi nhuận biên là đạo hàm P'(x) của hàm lợi nhuận P(x)."
+  },
+  {
+    "id": "q_bai-05_11",
+    "q": "Một doanh nghiệp sản xuất x sản phẩm với hàm tổng chi phí C(x) = 0.01x^3 - 3x^2 + 400x + 5000. Chi phí biên tại mức sản lượng x = 100 bằng:",
+    "options": [
+      "100",
+      "200",
+      "300",
+      "400"
+    ],
+    "answer": 0,
+    "explain": "Chi phí biên C'(x) = 0.03x^2 - 6x + 400. Tại x = 100: C'(100) = 0.03(10000) - 6(100) + 400 = 300 - 600 + 400 = 100."
+  },
+  {
+    "id": "q_bai-05_12",
+    "q": "Một chất điểm chuyển động theo quy luật s(t) = -t^3 + 6t^2 + 2 (t tính bằng giây, s tính bằng mét). Vận tốc lớn nhất của chất điểm đạt được là:",
+    "options": [
+      "12 m/s",
+      "6 m/s",
+      "18 m/s",
+      "24 m/s"
+    ],
+    "answer": 0,
+    "explain": "v(t) = s'(t) = -3t^2 + 12t = -3(t - 2)^2 + 12 <= 12 m/s tại t = 2s."
   }
 ];

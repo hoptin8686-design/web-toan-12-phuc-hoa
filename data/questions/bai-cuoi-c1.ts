@@ -60,5 +60,89 @@ export const questions: Question[] = [
     ],
     "answer": 0,
     "explain": "Mục tiêu nắm vững chuyên đề với tỷ lệ đúng >= 80%."
+  },
+  {
+    "id": "q_bai-cuoi-c1_06",
+    "q": "Tìm tất cả các giá trị của tham số m để hàm số y = x^3 - 3x^2 + mx - 1 có hai điểm cực trị.",
+    "options": [
+      "m < 3",
+      "m > 3",
+      "m <= 3",
+      "m >= 3"
+    ],
+    "answer": 0,
+    "explain": "y' = 3x^2 - 6x + m. Hàm số có 2 điểm cực trị <=> Delta' = 9 - 3m > 0 <=> m < 3."
+  },
+  {
+    "id": "q_bai-cuoi-c1_07",
+    "q": "Tiệm cận xiên của đồ thị hàm số y = (x^2 + 2x - 1)/(x - 1) là đường thẳng:",
+    "options": [
+      "y = x + 3",
+      "y = x - 3",
+      "y = x + 1",
+      "y = 2x - 1"
+    ],
+    "answer": 0,
+    "explain": "(x^2 + 2x - 1) : (x - 1) = x + 3 + 2/(x - 1). Tiệm cận xiên là y = x + 3."
+  },
+  {
+    "id": "q_bai-cuoi-c1_08",
+    "q": "Cho hàm số y = f(x) có bảng xét dấu f'(x) đổi dấu 3 lần qua các điểm x = -2, x = 0, x = 1. Số điểm cực trị của hàm số là:",
+    "options": [
+      "3",
+      "2",
+      "1",
+      "4"
+    ],
+    "answer": 0,
+    "explain": "Đạo hàm đổi dấu 3 lần qua 3 nghiệm đơn nên có đúng 3 điểm cực trị."
+  },
+  {
+    "id": "q_bai-cuoi-c1_09",
+    "q": "Giá trị nhỏ nhất của hàm số y = x^4 - 2x^2 + 5 trên đoạn [-2; 2] bằng:",
+    "options": [
+      "4",
+      "5",
+      "13",
+      "1"
+    ],
+    "answer": 0,
+    "explain": "y' = 4x(x^2 - 1) = 0 <=> x = 0, x = ±1. y(0) = 5, y(±1) = 4, y(±2) = 13. Min = 4."
+  },
+  {
+    "id": "q_bai-cuoi-c1_10",
+    "q": "Đồ thị hàm số y = (2x - 4)/(x + 1) có tâm đối xứng là điểm:",
+    "options": [
+      "I(-1; 2)",
+      "I(1; 2)",
+      "I(-1; -4)",
+      "I(2; -1)"
+    ],
+    "answer": 0,
+    "explain": "TCĐ x = -1, TCN y = 2 => Giao điểm I(-1; 2) là tâm đối xứng."
+  },
+  {
+    "id": "q_bai-cuoi-c1_11",
+    "q": "Hàm số y = (x + 2)/(x - 1) nghịch biến trên các khoảng nào?",
+    "options": [
+      "(-∞; 1) và (1; +∞)",
+      "R \\ {1}",
+      "(-∞; -2) và (1; +∞)",
+      "(-2; 1)"
+    ],
+    "answer": 0,
+    "explain": "y' = -3/(x - 1)^2 < 0 với mọi x ≠ 1, nghịch biến trên từng khoảng xác định (-∞; 1) và (1; +∞)."
+  },
+  {
+    "id": "q_bai-cuoi-c1_12",
+    "q": "Số giao điểm của đồ thị hàm số y = x^3 - 3x và trục hoành là:",
+    "options": [
+      "3",
+      "2",
+      "1",
+      "0"
+    ],
+    "answer": 0,
+    "explain": "x^3 - 3x = 0 <=> x(x^2 - 3) = 0 <=> x = 0 hoặc x = ±sqrt(3). Có 3 giao điểm."
   }
 ];

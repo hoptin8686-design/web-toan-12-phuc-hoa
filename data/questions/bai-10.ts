@@ -120,5 +120,29 @@ export const questions: Question[] = [
     ],
     "answer": 0,
     "explain": "Tất cả các giá trị bằng nhau nên không có sai lệch: s = 0."
+  },
+  {
+    "id": "q_bai-10_11",
+    "q": "Độ lệch chuẩn s của mẫu số liệu ghép nhóm có phương sai s^2 = 25 là:",
+    "options": [
+      "5",
+      "25",
+      "625",
+      "12.5"
+    ],
+    "answer": 0,
+    "explain": "Độ lệch chuẩn là căn bậc hai của phương sai: s = sqrt(25) = 5."
+  },
+  {
+    "id": "q_bai-10_12",
+    "q": "So sánh hai lớp học có cùng điểm thi trung bình, lớp nào có độ lệch chuẩn s nhỏ hơn thì:",
+    "options": [
+      "Điểm số của học sinh lớp đó đồng đều hơn",
+      "Điểm số của học sinh lớp đó chênh lệch nhiều hơn",
+      "Điểm số của học sinh lớp đó cao hơn",
+      "Không thể kết luận được"
+    ],
+    "answer": 0,
+    "explain": "Độ lệch chuẩn càng nhỏ thì độ phân tán quanh số trung bình càng ít, nghĩa là điểm số đồng đều hơn."
   }
 ];

@@ -60,5 +60,89 @@ export const questions: Question[] = [
     ],
     "answer": 0,
     "explain": "Mục tiêu nắm vững chuyên đề với tỷ lệ đúng >= 80%."
+  },
+  {
+    "id": "q_bai-cuoi-c5_06",
+    "q": "Vectơ pháp tuyến của mặt phẳng (P): 2x - 3y + z - 5 = 0 là:",
+    "options": [
+      "(2; -3; 1)",
+      "(2; 3; 1)",
+      "(2; -3; -5)",
+      "(-3; 1; -5)"
+    ],
+    "answer": 0,
+    "explain": "Hệ số trước x, y, z là (2; -3; 1)."
+  },
+  {
+    "id": "q_bai-cuoi-c5_07",
+    "q": "Đường thẳng d đi qua M(1; 0; -2) và có VTCP u = (3; -1; 2) có phương trình tham số là:",
+    "options": [
+      "x = 1 + 3t, y = -t, z = -2 + 2t",
+      "x = 3 + t, y = -1, z = 2 - 2t",
+      "x = 1 + 3t, y = t, z = -2 + 2t",
+      "x = 1 - 3t, y = t, z = 2 + 2t"
+    ],
+    "answer": 0,
+    "explain": "x = x0 + at, y = y0 + bt, z = z0 + ct => x = 1 + 3t, y = -t, z = -2 + 2t."
+  },
+  {
+    "id": "q_bai-cuoi-c5_08",
+    "q": "Bán kính của mặt cầu (S): (x - 2)^2 + y^2 + (z + 1)^2 = 25 là:",
+    "options": [
+      "5",
+      "25",
+      "50",
+      "sqrt(5)"
+    ],
+    "answer": 0,
+    "explain": "R = sqrt(25) = 5."
+  },
+  {
+    "id": "q_bai-cuoi-c5_09",
+    "q": "Khoảng cách từ điểm M(0; 0; 3) đến mặt phẳng (Oxy) bằng:",
+    "options": [
+      "3",
+      "0",
+      "9",
+      "sqrt(3)"
+    ],
+    "answer": 0,
+    "explain": "d = |z_M| = |3| = 3."
+  },
+  {
+    "id": "q_bai-cuoi-c5_10",
+    "q": "Hai mặt phẳng (P): x + 2y - z + 1 = 0 và (Q): 2x + 4y - 2z + 3 = 0 ở vị trí:",
+    "options": [
+      "Song song với nhau",
+      "Cắt nhau nhưng không vuông góc",
+      "Trùng nhau",
+      "Vuông góc với nhau"
+    ],
+    "answer": 0,
+    "explain": "2/1 = 4/2 = -2/(-1) = 2 khác 3/1 nên song song."
+  },
+  {
+    "id": "q_bai-cuoi-c5_11",
+    "q": "Góc giữa hai mặt phẳng (P): x = 0 và (Q): y = 0 bằng:",
+    "options": [
+      "90 độ",
+      "0 độ",
+      "45 độ",
+      "180 độ"
+    ],
+    "answer": 0,
+    "explain": "Mặt phẳng (Oyz) và (Oxz) vuông góc nhau."
+  },
+  {
+    "id": "q_bai-cuoi-c5_12",
+    "q": "Đường thẳng d vuông góc với mặt phẳng (P): 3x - y + 2z - 1 = 0 có một vectơ chỉ phương là:",
+    "options": [
+      "(3; -1; 2)",
+      "(3; 1; 2)",
+      "(-1; 2; -1)",
+      "(2; -1; 3)"
+    ],
+    "answer": 0,
+    "explain": "Đường thẳng vuông góc với mặt phẳng thì VTCP của đường thẳng cùng phương với VTPT của mặt phẳng."
   }
 ];

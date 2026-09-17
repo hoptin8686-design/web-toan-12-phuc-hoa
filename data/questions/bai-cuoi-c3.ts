@@ -60,5 +60,89 @@ export const questions: Question[] = [
     ],
     "answer": 0,
     "explain": "Mục tiêu nắm vững chuyên đề với tỷ lệ đúng >= 80%."
+  },
+  {
+    "id": "q_bai-cuoi-c3_06",
+    "q": "Giá trị đại diện của nhóm [20; 30) là:",
+    "options": [
+      "25",
+      "20",
+      "30",
+      "10"
+    ],
+    "answer": 0,
+    "explain": "(20 + 30)/2 = 25."
+  },
+  {
+    "id": "q_bai-cuoi-c3_07",
+    "q": "Độ lệch chuẩn s của mẫu số liệu có phương sai s^2 = 36 là:",
+    "options": [
+      "6",
+      "18",
+      "72",
+      "1296"
+    ],
+    "answer": 0,
+    "explain": "s = sqrt(36) = 6."
+  },
+  {
+    "id": "q_bai-cuoi-c3_08",
+    "q": "Khoảng biến thiên R của mẫu số liệu ghép nhóm từ [10; 20) đến [50; 60] là:",
+    "options": [
+      "50",
+      "40",
+      "60",
+      "10"
+    ],
+    "answer": 0,
+    "explain": "R = 60 - 10 = 50."
+  },
+  {
+    "id": "q_bai-cuoi-c3_09",
+    "q": "Đại lượng nào sau đây KHÔNG PHẢI là số đặc trưng đo độ phân tán của mẫu số liệu ghép nhóm?",
+    "options": [
+      "Số trung bình",
+      "Khoảng biến thiên",
+      "Khoảng tứ phân vị",
+      "Phương sai"
+    ],
+    "answer": 0,
+    "explain": "Số trung bình là số đặc trưng đo xu thế trung tâm, không phải đo độ phân tán."
+  },
+  {
+    "id": "q_bai-cuoi-c3_10",
+    "q": "Cho Q1 = 12 và Q3 = 20. Khoảng tứ phân vị Delta_Q bằng:",
+    "options": [
+      "8",
+      "16",
+      "32",
+      "4"
+    ],
+    "answer": 0,
+    "explain": "Delta_Q = Q3 - Q1 = 20 - 12 = 8."
+  },
+  {
+    "id": "q_bai-cuoi-c3_11",
+    "q": "Nếu tất cả các số liệu trong mẫu ghép nhóm đều được nhân với 2 thì độ lệch chuẩn mới sẽ:",
+    "options": [
+      "Tăng gấp 2 lần",
+      "Tăng gấp 4 lần",
+      "Không đổi",
+      "Tăng gấp sqrt(2) lần"
+    ],
+    "answer": 0,
+    "explain": "Khi nhân mẫu số liệu với hằng số k > 0 thì độ lệch chuẩn nhân với k: s_moi = 2*s."
+  },
+  {
+    "id": "q_bai-cuoi-c3_12",
+    "q": "Độ phân tán của mẫu số liệu càng nhỏ chứng tỏ:",
+    "options": [
+      "Các giá trị càng tập trung gần số trung bình",
+      "Các giá trị càng tản mạn ra xa",
+      "Số trung bình càng lớn",
+      "Khoảng biến thiên càng lớn"
+    ],
+    "answer": 0,
+    "explain": "Ý nghĩa đo độ phân tán: độ phân tán càng nhỏ thì số liệu càng tập trung quanh trung tâm."
   }
 ];

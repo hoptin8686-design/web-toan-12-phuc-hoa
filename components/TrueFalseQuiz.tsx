@@ -266,7 +266,7 @@ export default function TrueFalseQuiz({
                 onClick={onGoNext}
                 className="w-full sm:w-auto rounded-full bg-gradient-to-r from-sea to-coral px-6 py-2.5 font-display text-sm font-bold text-white shadow-card hover:shadow-glow transition"
               >
-                Chuyển sang Tự luận logic →
+                Chuyển sang Phần III: Trả lời ngắn →
               </button>
             )}
             <button

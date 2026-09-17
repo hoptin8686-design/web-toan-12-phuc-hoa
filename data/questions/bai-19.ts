@@ -120,5 +120,29 @@ export const questions: Question[] = [
     ],
     "answer": 0,
     "explain": "P(B1|A) = (0.7 * 0.1) / 0.13 = 0.07 / 0.13 = 7/13."
+  },
+  {
+    "id": "q_bai-19_11",
+    "q": "Hệ hai biến cố {A, \\overline{A}} có tính chất nào sau đây?",
+    "options": [
+      "Là một hệ biến cố đầy đủ",
+      "Hai biến cố độc lập",
+      "Hai biến cố bằng nhau",
+      "Có tích P(A)*P(\\overline{A}) = 1"
+    ],
+    "answer": 0,
+    "explain": "A và A đối xung khắc nhau và hợp thành không gian mẫu nên tạo thành một hệ biến cố đầy đủ."
+  },
+  {
+    "id": "q_bai-19_12",
+    "q": "Công thức xác suất toàn phần với hệ đầy đủ {A1, A2} là:",
+    "options": [
+      "P(B) = P(A1)*P(B|A1) + P(A2)*P(B|A2)",
+      "P(B) = P(A1)*P(A2)",
+      "P(B) = P(B|A1) + P(B|A2)",
+      "P(B) = P(A1)*P(B) + P(A2)*P(B)"
+    ],
+    "answer": 0,
+    "explain": "Công thức xác suất toàn phần chuẩn trong SGK Toán 12."
   }
 ];

@@ -120,5 +120,29 @@ export const questions: Question[] = [
     ],
     "answer": 0,
     "explain": "Khoảng cách đến (Oxz) là |y| = |2| = 2."
+  },
+  {
+    "id": "q_bai-07_11",
+    "q": "Hình chiếu vuông góc của điểm M(2; -3; 5) lên mặt phẳng toạ độ (Oxy) là điểm có toạ độ:",
+    "options": [
+      "(2; -3; 0)",
+      "(2; 0; 5)",
+      "(0; -3; 5)",
+      "(0; 0; 5)"
+    ],
+    "answer": 0,
+    "explain": "Chiếu lên (Oxy) thì giữ nguyên hoành độ x, tung độ y và cho cao độ z = 0."
+  },
+  {
+    "id": "q_bai-07_12",
+    "q": "Điểm đối xứng của M(1; 2; -3) qua gốc toạ độ O là:",
+    "options": [
+      "(-1; -2; 3)",
+      "(-1; 2; -3)",
+      "(1; -2; 3)",
+      "(-1; -2; -3)"
+    ],
+    "answer": 0,
+    "explain": "Đối xứng qua gốc O thì đổi dấu cả 3 toạ độ: (-1; -2; 3)."
   }
 ];

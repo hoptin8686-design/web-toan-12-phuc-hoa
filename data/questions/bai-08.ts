@@ -120,5 +120,29 @@ export const questions: Question[] = [
     ],
     "answer": 0,
     "explain": "AD = BC => D - A = C - B => D = A + C - B = (1+1-2; 0+3-1; 1+2-2) = (0; 2; 1)."
+  },
+  {
+    "id": "q_bai-08_11",
+    "q": "Cho hai vectơ vecto(a) = (1; 2; -1) và vecto(b) = (2; m; 4). Tìm m để vecto(a) vuông góc với vecto(b).",
+    "options": [
+      "m = 1",
+      "m = -1",
+      "m = 2",
+      "m = 0"
+    ],
+    "answer": 0,
+    "explain": "vecto(a) vuông góc vecto(b) <=> a.b = 0 <=> 1*2 + 2*m + (-1)*4 = 0 <=> 2m - 2 = 0 <=> m = 1."
+  },
+  {
+    "id": "q_bai-08_12",
+    "q": "Tính côsin góc giữa hai vectơ vecto(a) = (1; 0; 1) và vecto(b) = (1; 1; 0).",
+    "options": [
+      "1/2",
+      "sqrt(2)/2",
+      "sqrt(3)/2",
+      "1"
+    ],
+    "answer": 0,
+    "explain": "cos(a, b) = (1*1 + 0*1 + 1*0) / (sqrt(2)*sqrt(2)) = 1/2."
   }
 ];

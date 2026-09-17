@@ -120,5 +120,29 @@ export const questions: Question[] = [
     ],
     "answer": 0,
     "explain": "Thay (3; 0; 0): 3 - 0 + 0 - 3 = 0 (thoả mãn)."
+  },
+  {
+    "id": "q_bai-14_11",
+    "q": "Khoảng cách từ điểm M(1; 2; 3) đến mặt phẳng (P): 2x - 2y + z + 5 = 0 bằng:",
+    "options": [
+      "2",
+      "6",
+      "1",
+      "3"
+    ],
+    "answer": 0,
+    "explain": "d = |2(1) - 2(2) + 3 + 5| / sqrt(4 + 4 + 1) = |2 - 4 + 8| / 3 = 6 / 3 = 2."
+  },
+  {
+    "id": "q_bai-14_12",
+    "q": "Mặt phẳng đi qua điểm M(1; -2; 3) và song song với mặt phẳng (P): x - 3y + 2z - 1 = 0 có phương trình là:",
+    "options": [
+      "x - 3y + 2z - 13 = 0",
+      "x - 3y + 2z + 13 = 0",
+      "x - 3y + 2z - 1 = 0",
+      "x - 3y - 2z + 1 = 0"
+    ],
+    "answer": 0,
+    "explain": "Phương trình có dạng x - 3y + 2z + D = 0. Thay M(1; -2; 3): 1 - 3(-2) + 2(3) + D = 13 + D = 0 => D = -13."
   }
 ];

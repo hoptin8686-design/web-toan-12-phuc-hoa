@@ -120,5 +120,29 @@ export const questions: Question[] = [
     ],
     "answer": 0,
     "explain": "Dữ liệu không phân tán nên R = 0."
+  },
+  {
+    "id": "q_bai-09_11",
+    "q": "Khoảng biến thiên R của mẫu số liệu ghép nhóm với các nhóm từ [a1; a2) đến [ak; ak+1) là:",
+    "options": [
+      "R = a_{k+1} - a_1",
+      "R = a_k - a_1",
+      "R = a_{k+1} - a_2",
+      "R = a_k - a_2"
+    ],
+    "answer": 0,
+    "explain": "Khoảng biến thiên là hiệu giữa đầu mút phải của nhóm cuối cùng và đầu mút trái của nhóm đầu tiên: R = a_{k+1} - a_1."
+  },
+  {
+    "id": "q_bai-09_12",
+    "q": "Khoảng tứ phân vị Delta_Q của mẫu số liệu ghép nhóm được tính bằng công thức:",
+    "options": [
+      "Delta_Q = Q_3 - Q_1",
+      "Delta_Q = Q_3 - Q_2",
+      "Delta_Q = Q_2 - Q_1",
+      "Delta_Q = (Q_3 - Q_1)/2"
+    ],
+    "answer": 0,
+    "explain": "Khoảng tứ phân vị Delta_Q = Q_3 - Q_1, phản ánh mức độ phân tán của 50% số liệu chính giữa."
   }
 ];

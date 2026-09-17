@@ -41,6 +41,7 @@ export default function LessonPage({ params }: { params: { baiId: string } }) {
       theory={theory}
       mcq={mcq}
       tf={extra?.tf ?? []}
+      shortAnswer={extra?.shortAnswer ?? []}
       essay={extra?.essay ?? []}
       sgkUrl={sgkUrl}
     />

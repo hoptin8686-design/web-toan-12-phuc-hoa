@@ -120,5 +120,29 @@ export const questions: Question[] = [
     ],
     "answer": 0,
     "explain": "y' = (x^2 - 1)/x^2 < 0 <=> -1 < x < 1 (x ≠ 0)."
+  },
+  {
+    "id": "q_bai-01_11",
+    "q": "Tìm tất cả các giá trị thực của tham số m để hàm số y = x^3 - 3mx^2 + 3(2m - 1)x + 1 đồng biến trên R.",
+    "options": [
+      "m = 1",
+      "m > 1",
+      "m < 1",
+      "m <= 1"
+    ],
+    "answer": 0,
+    "explain": "y' = 3x^2 - 6mx + 3(2m - 1) >= 0 với mọi x <=> Delta' = 9m^2 - 9(2m - 1) = 9(m - 1)^2 <= 0 <=> m = 1."
+  },
+  {
+    "id": "q_bai-01_12",
+    "q": "Cho hàm số f(x) có bảng biến thiên với f'(x) đổi dấu từ dương sang âm khi qua x = -1 và đổi dấu từ âm sang dương khi qua x = 2. Khẳng định nào đúng?",
+    "options": [
+      "Hàm số đạt cực đại tại x = -1 và đạt cực tiểu tại x = 2",
+      "Hàm số đạt cực tiểu tại x = -1 và đạt cực đại tại x = 2",
+      "Hàm số đồng biến trên khoảng (-1; 2)",
+      "Hàm số nghịch biến trên khoảng (2; +∞)"
+    ],
+    "answer": 0,
+    "explain": "Đạo hàm đổi dấu từ + sang - khi qua x0 thì x0 là điểm cực đại; từ - sang + thì là cực tiểu."
   }
 ];

@@ -2,15 +2,16 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import type { EssayQuestion, LessonTheory, Question, TFQuestion } from "@/lib/types";
-import { getLessonProgress, theoryKey, tfKey, sgkKey } from "@/lib/progress";
+import type { EssayQuestion, LessonTheory, Question, TFQuestion, ShortAnswerQuestion } from "@/lib/types";
+import { getLessonProgress, theoryKey, tfKey, saKey, sgkKey } from "@/lib/progress";
 import QuizClient from "@/components/QuizClient";
 import TrueFalseQuiz from "@/components/TrueFalseQuiz";
+import ShortAnswerQuiz from "@/components/ShortAnswerQuiz";
 import EssayViewer from "@/components/EssayViewer";
 import TheoryViewer from "@/components/TheoryViewer";
 import SgkViewer from "@/components/SgkViewer";
 
-type Mode = "menu" | "theory" | "mcq" | "tf" | "essay" | "sgk";
+type Mode = "menu" | "theory" | "mcq" | "tf" | "sa" | "essay" | "sgk";
 
 export default function LessonClient({
   lessonId,
@@ -20,6 +21,7 @@ export default function LessonClient({
   theory,
   mcq,
   tf,
+  shortAnswer = [],
   essay,
   sgkUrl,
 }: {
@@ -30,12 +32,14 @@ export default function LessonClient({
   theory: LessonTheory | null;
   mcq: Question[];
   tf: TFQuestion[];
+  shortAnswer?: ShortAnswerQuestion[];
   essay: EssayQuestion[];
   sgkUrl?: string | null;
 }) {
   const [mode, setMode] = useState<Mode>("menu");
   const [bestMcq, setBestMcq] = useState<number | null>(null);
   const [bestTf, setBestTf] = useState<number | null>(null);
+  const [bestSa, setBestSa] = useState<number | null>(null);
   const [readTheory, setReadTheory] = useState(false);
   const [readSgk, setReadSgk] = useState(false);
 
@@ -43,6 +47,7 @@ export default function LessonClient({
     if (mode === "menu") {
       setBestMcq(getLessonProgress(lessonId)?.best ?? null);
       setBestTf(getLessonProgress(tfKey(lessonId))?.best ?? null);
+      setBestSa(getLessonProgress(saKey(lessonId))?.best ?? null);
       setReadTheory(getLessonProgress(theoryKey(lessonId)) !== null);
       setReadSgk(getLessonProgress(sgkKey(lessonId)) !== null);
     }
@@ -86,7 +91,7 @@ export default function LessonClient({
     );
   }
 
-  // 3. Chế độ Trắc nghiệm 15 câu 4 lựa chọn
+  // 3. Phần I: Trắc nghiệm 12 câu 4 lựa chọn
   if (mode === "mcq") {
     return (
       <main className="playground min-h-screen pb-16">
@@ -95,13 +100,13 @@ export default function LessonClient({
           lessonTitle={lessonTitle}
           questions={mcq}
           onBack={() => leaveTo("menu")}
-          onGoNext={tf.length > 0 ? () => leaveTo("tf") : undefined}
+          onGoNext={tf.length > 0 ? () => leaveTo("tf") : (shortAnswer.length > 0 ? () => leaveTo("sa") : undefined)}
         />
       </main>
     );
   }
 
-  // 4. Chế độ Đúng / Sai theo format BGD
+  // 4. Phần II: Đúng / Sai 4 câu format BGD 2025
   if (mode === "tf") {
     return (
       <main className="playground min-h-screen pb-16">
@@ -110,13 +115,28 @@ export default function LessonClient({
           lessonTitle={lessonTitle}
           questions={tf}
           onBack={() => leaveTo("menu")}
+          onGoNext={shortAnswer.length > 0 ? () => leaveTo("sa") : (essay.length > 0 ? () => leaveTo("essay") : undefined)}
+        />
+      </main>
+    );
+  }
+
+  // 5. Phần III: Trả lời ngắn 6 câu format BGD 2025
+  if (mode === "sa") {
+    return (
+      <main className="playground min-h-screen pb-16">
+        <ShortAnswerQuiz
+          lessonId={lessonId}
+          lessonTitle={lessonTitle}
+          questions={shortAnswer}
+          onBack={() => leaveTo("menu")}
           onGoNext={essay.length > 0 ? () => leaveTo("essay") : undefined}
         />
       </main>
     );
   }
 
-  // 5. Chế độ Tự luận & Lập luận logic
+  // 6. Chế độ Tự luận & Bảng nháp Lập luận logic
   if (mode === "essay") {
     return (
       <main className="playground min-h-screen pb-16">
@@ -139,7 +159,7 @@ export default function LessonClient({
             href="/"
             className="flex items-center gap-2 rounded-full border border-star/20 bg-void-card px-4 py-1.5 font-mono text-xs font-medium text-star hover:border-sea/40 transition"
           >
-            ← Về trang chủ Toán 10
+            ← Về trang chủ Toán 12
           </Link>
           <span className="font-mono text-xs text-star-soft">
             Trường THPT Phục Hòa • Tổ Tự nhiên
@@ -155,12 +175,12 @@ export default function LessonClient({
             {lessonTitle}
           </h1>
           <p className="mt-2 text-sm text-star-soft">
-            {bookPages ? `${bookPages} SGK Toán 10 Kết nối tri thức. ` : ""}
-            Chọn một trong 5 phân hệ học tập dưới đây để bắt đầu. Đạt từ 80% trắc nghiệm trở lên để nhận Sao Vàng Phục Hòa ⭐.
+            {bookPages ? `${bookPages} SGK Toán 12 Kết nối tri thức. ` : ""}
+            Hệ thống ôn luyện chuẩn 3 phần cấu trúc thi Tốt nghiệp THPT 2025 của Bộ GD&ĐT. Đạt từ 80% trở lên để nhận Sao Vàng Phục Hòa ⭐.
           </p>
         </div>
 
-        {/* Lưới 5 phân hệ học tập */}
+        {/* Lưới các phân hệ học tập */}
         <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
           {/* Card 1: SGK Điện tử */}
           <button
@@ -208,10 +228,10 @@ export default function LessonClient({
                   )}
                 </div>
                 <h3 className="mt-3 font-display text-lg font-bold text-star">
-                  Lý thuyết 5 Điểm Cốt lõi
+                  Lý thuyết Cốt lõi
                 </h3>
                 <p className="mt-1 text-xs text-star-soft leading-relaxed">
-                  Sơ đồ logic, bảng chân trị SVG, hộp cảnh báo bẫy thi cử và câu hỏi phản xạ nhanh xen kẽ từng phần.
+                  Sơ đồ logic, đồ thị trực quan, bảng tóm tắt công thức, hộp cảnh báo bẫy thi cử và câu hỏi phản xạ nhanh.
                 </p>
               </div>
               <span className="mt-4 inline-flex items-center font-display text-xs font-bold text-coral">
@@ -220,7 +240,7 @@ export default function LessonClient({
             </button>
           )}
 
-          {/* Card 3: Trắc nghiệm 15 câu 4 lựa chọn */}
+          {/* Card 3: Phần I - Trắc nghiệm 12 câu 4 lựa chọn */}
           {mcq.length > 0 && (
             <button
               onClick={() => leaveTo("mcq")}
@@ -240,25 +260,25 @@ export default function LessonClient({
                       {bestMcq >= 80 ? `⭐ ${bestMcq}%` : `${bestMcq}%`}
                     </span>
                   ) : (
-                    <span className="rounded-full bg-star/10 px-2.5 py-0.5 font-mono text-[11px] text-star-soft">
-                      {mcq.length} câu trắc nghiệm
+                    <span className="rounded-full bg-sea/20 px-2.5 py-0.5 font-mono text-[11px] font-bold text-sea-deep">
+                      Phần I • {mcq.length} câu
                     </span>
                   )}
                 </div>
                 <h3 className="mt-3 font-display text-lg font-bold text-star">
-                  Trắc nghiệm 15 câu chọn 1
+                  Phần I: Trắc nghiệm 12 câu
                 </h3>
                 <p className="mt-1 text-xs text-star-soft leading-relaxed">
-                  Trộn ngẫu nhiên câu hỏi và đáp án, độ dài phương án cân đối, phản hồi giải thích cặn kẽ và bắn pháo hoa khi đạt điểm cao.
+                  12 câu hỏi trắc nghiệm nhiều lựa chọn (chọn 1 trong 4 phương án A, B, C, D) bao quát toàn bộ kiến thức trọng tâm của bài.
                 </p>
               </div>
               <span className="mt-4 inline-flex items-center font-display text-xs font-bold text-sea-deep">
-                {bestMcq !== null ? "Luyện lại đề mới →" : "Bắt đầu làm bài trắc nghiệm →"}
+                {bestMcq !== null ? "Luyện lại Phần I →" : "Làm 12 câu trắc nghiệm →"}
               </span>
             </button>
           )}
 
-          {/* Card 4: Đúng / Sai 4 ý */}
+          {/* Card 4: Phần II - Đúng / Sai 4 câu */}
           {tf.length > 0 && (
             <button
               onClick={() => leaveTo("tf")}
@@ -267,30 +287,66 @@ export default function LessonClient({
               <div>
                 <div className="flex items-center justify-between">
                   <span className="text-3xl">⚖️</span>
-                  {bestTf !== null && (
+                  {bestTf !== null ? (
                     <span className="rounded-full bg-gold/20 px-2.5 py-0.5 font-mono text-[11px] font-bold text-gold-deep">
                       {bestTf >= 80 ? `⭐ ${bestTf}%` : `${bestTf}%`}
+                    </span>
+                  ) : (
+                    <span className="rounded-full bg-gold/20 px-2.5 py-0.5 font-mono text-[11px] font-bold text-gold-deep">
+                      Phần II • {tf.length} câu
                     </span>
                   )}
                 </div>
                 <h3 className="mt-3 font-display text-lg font-bold text-star">
-                  Tư duy Đúng / Sai
+                  Phần II: Đúng / Sai 4 câu
                 </h3>
                 <p className="mt-1 text-xs text-star-soft leading-relaxed">
-                  Đúng định dạng cấu trúc đề thi mới của Bộ GD&ĐT: Mỗi câu gồm một tình huống toán học và 4 mệnh đề độc lập a, b, c, d.
+                  4 tình huống toán học với 16 nhận định độc lập a, b, c, d. Chấm điểm theo thang bậc chuẩn kỳ thi Tốt nghiệp THPT 2025.
                 </p>
               </div>
               <span className="mt-4 inline-flex items-center font-display text-xs font-bold text-gold-deep">
-                Rèn phản biện Đúng/Sai →
+                {bestTf !== null ? "Luyện lại Đúng/Sai →" : "Rèn phản biện Đúng/Sai →"}
               </span>
             </button>
           )}
 
-          {/* Card 5: Tự luận & Bảng nháp */}
+          {/* Card 5: Phần III - Trả lời ngắn 6 câu */}
+          {shortAnswer.length > 0 && (
+            <button
+              onClick={() => leaveTo("sa")}
+              className="flex flex-col justify-between rounded-2xl border border-coral/40 bg-void-card p-5 text-left shadow-card transition hover:-translate-y-1 hover:border-coral hover:shadow-card-hover cursor-pointer"
+            >
+              <div>
+                <div className="flex items-center justify-between">
+                  <span className="text-3xl">✍️</span>
+                  {bestSa !== null ? (
+                    <span className="rounded-full bg-coral/20 px-2.5 py-0.5 font-mono text-[11px] font-bold text-coral">
+                      {bestSa >= 80 ? `⭐ ${bestSa}%` : `${bestSa}%`}
+                    </span>
+                  ) : (
+                    <span className="rounded-full bg-coral/20 px-2.5 py-0.5 font-mono text-[11px] font-bold text-coral">
+                      Phần III • {shortAnswer.length} câu
+                    </span>
+                  )}
+                </div>
+                <h3 className="mt-3 font-display text-lg font-bold text-star">
+                  Phần III: Trả lời ngắn 6 câu
+                </h3>
+                <p className="mt-1 text-xs text-star-soft leading-relaxed">
+                  6 bài toán yêu cầu tự tính toán và nhập đáp số chính xác. Hệ thống tự động so khớp, chấm điểm và hiện lời giải chi tiết.
+                </p>
+              </div>
+              <span className="mt-4 inline-flex items-center font-display text-xs font-bold text-coral">
+                {bestSa !== null ? "Luyện lại Trả lời ngắn →" : "Làm bài Trả lời ngắn →"}
+              </span>
+            </button>
+          )}
+
+          {/* Card 6: Tự luận & Bảng nháp */}
           {essay.length > 0 && (
             <button
               onClick={() => leaveTo("essay")}
-              className="flex flex-col justify-between rounded-2xl border border-leaf/30 bg-void-card p-5 text-left shadow-card transition hover:-translate-y-1 hover:border-leaf hover:shadow-card-hover cursor-pointer sm:col-span-2"
+              className="flex flex-col justify-between rounded-2xl border border-leaf/30 bg-void-card p-5 text-left shadow-card transition hover:-translate-y-1 hover:border-leaf hover:shadow-card-hover cursor-pointer"
             >
               <div>
                 <div className="flex items-center justify-between">
@@ -300,14 +356,14 @@ export default function LessonClient({
                   </span>
                 </div>
                 <h3 className="mt-3 font-display text-lg font-bold text-star">
-                  Tự luận & Bảng nháp Lập luận logic
+                  Tự luận & Bảng nháp Lập luận
                 </h3>
                 <p className="mt-1 text-xs text-star-soft leading-relaxed">
-                  Rèn luyện khả năng trình bày bài toán logic hình thức, chứng minh phản chứng, kèm bảng nháp gõ trực tiếp và nút mở xem đáp án chi tiết.
+                  Rèn luyện khả năng trình bày bài toán logic hình thức, kèm bảng nháp gõ trực tiếp và nút mở xem đáp án chi tiết.
                 </p>
               </div>
               <span className="mt-4 inline-flex items-center font-display text-xs font-bold text-leaf-deep">
-                Mở bảng nháp & bài tập tự luận →
+                Mở bảng nháp & tự luận →
               </span>
             </button>
           )}
