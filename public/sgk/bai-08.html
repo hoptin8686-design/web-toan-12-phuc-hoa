@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bài 8. Biểu thức toạ độ của các phép toán vectơ — SGK Toán 12 (Tập 1 - KNTT)</title>
+  <meta name="description" content="Sách giáo khoa điện tử Toán 12 Kết nối tri thức - Bài 8. Biểu thức toạ độ của các phép toán vectơ (Trang 67-72). Đầy đủ hình vẽ, đồ thị và bảng biến thiên nguyên bản.">
+  <style>
+    :root {
+      --bg: #0a1720;
+      --panel: #102631;
+      --panel-border: #183745;
+      --accent: #0d7c86;
+      --accent-glow: #5eead4;
+      --text: #eaf3f5;
+      --text-muted: #94b3bc;
+      --gold: #efa31d;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background-color: var(--panel);
+      border-bottom: 1px solid var(--panel-border);
+      padding: 10px 16px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .back-btn {
+      background: #183745;
+      color: var(--text);
+      border: 1px solid rgba(94, 234, 212, 0.3);
+      padding: 6px 12px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+    .back-btn:hover {
+      background: var(--accent);
+      color: #fff;
+    }
+    .header-title h1 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #fff;
+    }
+    .header-title p {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+    .controls {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn {
+      background: #183745;
+      color: var(--text);
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 13px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+    .btn:hover {
+      background: var(--accent);
+      color: #fff;
+    }
+    .btn.active {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent-glow);
+    }
+    .quiz-btn {
+      background: linear-gradient(135deg, #0d7c86, #f2683c);
+      color: #fff;
+      border: none;
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .quiz-btn:hover {
+      opacity: 0.95;
+      box-shadow: 0 0 12px rgba(94, 234, 212, 0.4);
+    }
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 16px;
+      max-width: 1080px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    .page-card {
+      background: var(--panel);
+      border: 1px solid var(--panel-border);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 24px;
+      width: 100%;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    }
+    .page-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 16px;
+      background: #142f3d;
+      font-size: 12px;
+      border-bottom: 1px solid var(--panel-border);
+      color: var(--text-muted);
+    }
+    .badge {
+      background: rgba(94, 234, 212, 0.15);
+      color: var(--accent-glow);
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 11px;
+    }
+    .page-img-wrapper {
+      width: 100%;
+      background: #060e14;
+      display: flex;
+      justify-content: center;
+    }
+    .book-img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    /* Flip mode container */
+    #flip-container {
+      display: none;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+    }
+    .flip-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin: 12px 0 20px;
+    }
+    .flip-card {
+      max-width: 900px;
+      width: 100%;
+    }
+    footer {
+      background: var(--panel);
+      border-top: 1px solid var(--panel-border);
+      padding: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .nav-link {
+      color: var(--accent-glow);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      background: #183745;
+      padding: 8px 14px;
+      border-radius: 8px;
+    }
+    .nav-link:hover {
+      background: var(--accent);
+      color: #fff;
+    }
+    .nav-link.disabled {
+      opacity: 0.4;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <a href="/luyen/bai-08" class="back-btn">← Luyện tập</a>
+      <div class="header-title">
+        <h1>Bài 8. Biểu thức toạ độ của các phép toán vectơ</h1>
+        <p>Chương II. Vectơ và hệ trục toạ độ trong không gian • Tập 1 (Trang 67-72)</p>
+      </div>
+    </div>
+    <div class="controls">
+      <button class="btn active" id="btn-scroll" onclick="setMode('scroll')">Cuộn liên tục</button>
+      <button class="btn" id="btn-flip" onclick="setMode('flip')">Lật từng trang</button>
+      <button class="btn" onclick="toggleZoom()">Phóng to 🔍</button>
+      <a href="/luyen/bai-08" class="quiz-btn">Luyện trắc nghiệm 🎯</a>
+    </div>
+  </header>
+
+  <main>
+    <div id="scroll-container" style="width: 100%;">
+      
+        <div class="page-card" id="page-sec-1">
+          <div class="page-header">
+            <span>Trang sách: <strong>Trang 67</strong></span>
+            <span class="badge">Trang 1 / 6</span>
+          </div>
+          <div class="page-img-wrapper">
+            <img src="/sgk/pages/t1_page_068.webp" alt="Trang 67" loading="lazy" class="book-img" />
+          </div>
+        </div>
+        
+        <div class="page-card" id="page-sec-2">
+          <div class="page-header">
+            <span>Trang sách: <strong>Trang 68</strong></span>
+            <span class="badge">Trang 2 / 6</span>
+          </div>
+          <div class="page-img-wrapper">
+            <img src="/sgk/pages/t1_page_069.webp" alt="Trang 68" loading="lazy" class="book-img" />
+          </div>
+        </div>
+        
+        <div class="page-card" id="page-sec-3">
+          <div class="page-header">
+            <span>Trang sách: <strong>Trang 69</strong></span>
+            <span class="badge">Trang 3 / 6</span>
+          </div>
+          <div class="page-img-wrapper">
+            <img src="/sgk/pages/t1_page_070.webp" alt="Trang 69" loading="lazy" class="book-img" />
+          </div>
+        </div>
+        
+        <div class="page-card" id="page-sec-4">
+          <div class="page-header">
+            <span>Trang sách: <strong>Trang 70</strong></span>
+            <span class="badge">Trang 4 / 6</span>
+          </div>
+          <div class="page-img-wrapper">
+            <img src="/sgk/pages/t1_page_071.webp" alt="Trang 70" loading="lazy" class="book-img" />
+          </div>
+        </div>
+        
+        <div class="page-card" id="page-sec-5">
+          <div class="page-header">
+            <span>Trang sách: <strong>Trang 71</strong></span>
+            <span class="badge">Trang 5 / 6</span>
+          </div>
+          <div class="page-img-wrapper">
+            <img src="/sgk/pages/t1_page_072.webp" alt="Trang 71" loading="lazy" class="book-img" />
+          </div>
+        </div>
+        
+        <div class="page-card" id="page-sec-6">
+          <div class="page-header">
+            <span>Trang sách: <strong>Trang 72</strong></span>
+            <span class="badge">Trang 6 / 6</span>
+          </div>
+          <div class="page-img-wrapper">
+            <img src="/sgk/pages/t1_page_073.webp" alt="Trang 72" loading="lazy" class="book-img" />
+          </div>
+        </div>
+        
+    </div>
+
+    <div id="flip-container">
+      <div class="flip-nav">
+        <button class="btn" onclick="prevPage()">‹ Trang trước</button>
+        <span id="flip-counter" style="font-size: 14px; font-weight: 600;">Trang 1 / 6</span>
+        <button class="btn" onclick="nextPage()">Trang sau ›</button>
+      </div>
+      <div class="page-card flip-card">
+        <div class="page-header">
+          <span id="flip-book-p">Trang sách: ...</span>
+          <span class="badge" id="flip-idx-badge">Trang 1 / 6</span>
+        </div>
+        <div class="page-img-wrapper">
+          <img id="flip-img" src="" alt="Trang SGK" class="book-img" />
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div><a href="/sgk/bai-07.html" class="nav-link">← Bài 7. Hệ trục toạ độ trong không gian</a></div>
+    <div style="font-size: 12px; color: var(--text-muted); text-align: center;">
+      Trường THPT Phục Hòa — Chinh phục Toán 12
+    </div>
+    <div><a href="/sgk/bai-cuoi-c2.html" class="nav-link">Bài tập cuối chương II →</a></div>
+  </footer>
+
+  <script>
+    const pages = [{"pdf_p": 68, "book_p": 67, "img": "/sgk/pages/t1_page_068.webp"}, {"pdf_p": 69, "book_p": 68, "img": "/sgk/pages/t1_page_069.webp"}, {"pdf_p": 70, "book_p": 69, "img": "/sgk/pages/t1_page_070.webp"}, {"pdf_p": 71, "book_p": 70, "img": "/sgk/pages/t1_page_071.webp"}, {"pdf_p": 72, "book_p": 71, "img": "/sgk/pages/t1_page_072.webp"}, {"pdf_p": 73, "book_p": 72, "img": "/sgk/pages/t1_page_073.webp"}];
+    let currentMode = 'scroll';
+    let currentFlipIdx = 0;
+    let isZoomed = false;
+
+    function setMode(mode) {
+      currentMode = mode;
+      document.getElementById('btn-scroll').classList.toggle('active', mode === 'scroll');
+      document.getElementById('btn-flip').classList.toggle('active', mode === 'flip');
+      document.getElementById('scroll-container').style.display = (mode === 'scroll') ? 'block' : 'none';
+      document.getElementById('flip-container').style.display = (mode === 'flip') ? 'flex' : 'none';
+      if (mode === 'flip') {
+        renderFlip();
+      }
+    }
+
+    function renderFlip() {
+      if (pages.length === 0) return;
+      const p = pages[currentFlipIdx];
+      document.getElementById('flip-img').src = p.img;
+      document.getElementById('flip-counter').innerText = `Trang ${currentFlipIdx + 1} / ${pages.length}`;
+      document.getElementById('flip-book-p').innerHTML = `Trang sách: <strong>Trang ${p.book_p}</strong>`;
+      document.getElementById('flip-idx-badge').innerText = `Trang ${currentFlipIdx + 1} / ${pages.length}`;
+    }
+
+    function prevPage() {
+      if (currentFlipIdx > 0) {
+        currentFlipIdx--;
+        renderFlip();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }
+
+    function nextPage() {
+      if (currentFlipIdx < pages.length - 1) {
+        currentFlipIdx++;
+        renderFlip();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }
+
+    function toggleZoom() {
+      isZoomed = !isZoomed;
+      const imgs = document.querySelectorAll('.book-img');
+      imgs.forEach(img => {
+        img.style.maxWidth = isZoomed ? '135%' : '100%';
+      });
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (currentMode === 'flip') {
+        if (e.key === 'ArrowLeft') prevPage();
+        if (e.key === 'ArrowRight') nextPage();
+      }
+    });
+  </script>
+</body>
+</html>
