@@ -115,12 +115,21 @@ export type ErrorStat = {
   totalAnswered: number;
 };
 
+export type ShortAnswerQuestion = {
+  id: string;
+  q: string;
+  math?: string;
+  correctAnswer: string;
+  explain: string;
+  unit?: string;
+};
+
 export type MockExam = {
   id: string;
   title: string;
   durationMinutes: number;
   description: string;
-  questions: Question[];
-  tfQuestions?: TFQuestion[];
-  shortAnswerQuestions?: EssayQuestion[];
+  questions: Question[]; // Phần I: 12 câu trắc nghiệm
+  tfQuestions: TFQuestion[]; // Phần II: 4 câu đúng / sai
+  shortAnswerQuestions: ShortAnswerQuestion[]; // Phần III: 6 câu trả lời ngắn
 };
