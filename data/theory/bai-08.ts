@@ -1,80 +1,33 @@
 import type { LessonTheory } from "@/lib/types";
 
 const bai08: LessonTheory = {
-  "intro": "Biểu thức toạ độ của các phép toán vectơ: tổng hiệu, nhân số thực, tích vô hướng, độ dài vectơ và khoảng cách.",
+  "intro": "Biểu thức toạ độ của các phép toán vectơ: cộng, trừ, nhân với một số, tích vô hướng, độ dài và góc.",
   "minutes": 15,
   "sections": [
     {
-      "id": "trong-tam",
-      "emoji": "💡",
-      "heading": "1. Kiến thức trọng tâm cần nhớ",
+      "id": "phep-toan",
+      "emoji": "🧮",
+      "heading": "1. Biểu thức toạ độ các phép toán",
       "blocks": [
         {
-          "kind": "cards",
-          "tone": "sea",
-          "items": [
-            {
-              "emoji": "📌",
-              "title": "Khái niệm cốt lõi",
-              "text": "Nắm vững định nghĩa, ý nghĩa hình học và giải tích của Bài 8. Biểu thức toạ độ của các phép toán vectơ."
-            },
-            {
-              "emoji": "⚡",
-              "title": "Công thức then chốt",
-              "text": "Ghi nhớ chính xác công thức và các trường hợp ngoại lệ/điều kiện đi kèm."
-            },
-            {
-              "emoji": "🎯",
-              "title": "Kỹ năng giải bài",
-              "text": "Phân loại các dạng toán thường gặp từ nhận biết đến vận dụng cao."
-            }
-          ]
+          "kind": "mathBox",
+          "title": "Công thức toạ độ vectơ cơ bản",
+          "formula": "\\vec{a} \\pm \\vec{b} = (x_1 \\pm x_2; y_1 \\pm y_2; z_1 \\pm z_2); \\qquad k\\vec{a} = (kx_1; ky_1; kz_1); \\qquad |\\vec{a}| = \\sqrt{x_1^2 + y_1^2 + z_1^2}",
+          "note": "Hai vectơ cùng phương: $\\vec{a} = k\\vec{b} \\iff \\frac{x_1}{x_2} = \\frac{y_1}{y_2} = \\frac{z_1}{z_2}$ (khi các mẫu khác 0)."
         },
         {
           "kind": "mathBox",
-          "title": "Công thức trọng tâm",
-          "formula": "\\vec{a} \\cdot \\vec{b} = x_1 x_2 + y_1 y_2 + z_1 z_2, \\quad |\\vec{a}| = \\sqrt{x^2 + y^2 + z^2}",
-          "note": "Học sinh cần nắm chắc điều kiện áp dụng của công thức."
-        }
-      ]
-    },
-    {
-      "id": "phuong-phap-giai",
-      "emoji": "🛠️",
-      "heading": "2. Phương pháp giải & Chú ý sai lầm thường gặp",
-      "blocks": [
-        {
-          "kind": "steps",
-          "items": [
-            {
-              "label": "Bước 1",
-              "title": "Phân tích đề",
-              "text": "Xác định rõ dữ kiện bài toán và điều kiện ràng buộc."
-            },
-            {
-              "label": "Bước 2",
-              "title": "Thiết lập phương trình / biểu thức",
-              "text": "Chuyển ngôn ngữ đề bài sang biểu thức toán học chính xác."
-            },
-            {
-              "label": "Bước 3",
-              "title": "Giải và biện luận",
-              "text": "Tính toán cẩn thận, loại trừ nghiệm không thoả mãn."
-            }
-          ]
-        },
-        {
-          "kind": "warn",
-          "title": "Bẫy thường gặp",
-          "text": "Quên tìm điều kiện xác định hoặc nhầm lẫn giữa các khái niệm tương tự nhau trong đề thi."
+          "title": "Tích vô hướng và góc giữa hai vectơ",
+          "formula": "\\vec{a} \\cdot \\vec{b} = x_1 x_2 + y_1 y_2 + z_1 z_2; \\qquad \\cos(\\vec{a}, \\vec{b}) = \\frac{x_1 x_2 + y_1 y_2 + z_1 z_2}{\\sqrt{x_1^2+y_1^2+z_1^2} \\cdot \\sqrt{x_2^2+y_2^2+z_2^2}}",
+          "note": "Điều kiện vuông góc: $\\vec{a} \\perp \\vec{b} \\iff x_1 x_2 + y_1 y_2 + z_1 z_2 = 0$."
         }
       ]
     }
   ],
   "summary": [
-    "Nắm vững các khái niệm và công thức cốt lõi của Bài 8. Biểu thức toạ độ của các phép toán vectơ.",
-    "Lưu ý điều kiện xác định và cạm bẫy toán học thường gặp.",
-    "Luyện tập thành thạo 3 dạng: Trắc nghiệm 4 lựa chọn, Đúng/Sai và Trả lời ngắn."
+    "Tích vô hướng bằng tổng các tích của các toạ độ tương ứng.",
+    "Hai vectơ vuông góc khi và chỉ khi tích vô hướng bằng 0.",
+    "Độ dài vectơ bằng căn bậc hai của tổng bình phương ba toạ độ."
   ]
 };
 

@@ -5,6 +5,7 @@ import Link from "next/link";
 import confetti from "canvas-confetti";
 import { MOCK_EXAMS } from "@/data/mockExams";
 import type { MockExam } from "@/lib/types";
+import MathText from "@/components/MathText";
 
 export default function ThiThuClient() {
   const [selectedExam, setSelectedExam] = useState<MockExam | null>(null);
@@ -372,7 +373,7 @@ export default function ThiThuClient() {
                       {qIdx + 1}
                     </span>
                     <div className="flex-1 font-body text-sm font-semibold text-star leading-relaxed">
-                      {q.q}
+                      <MathText text={q.q} />
                     </div>
                   </div>
 
@@ -407,7 +408,7 @@ export default function ThiThuClient() {
                           className={`w-full text-left rounded-2xl border p-3 text-xs sm:text-sm transition flex items-center gap-3 ${btnStyle}`}
                         >
                           <span className="font-mono font-bold">{labels[optIdx]}.</span>
-                          <span>{opt}</span>
+                          <span><MathText text={opt} /></span>
                         </button>
                       );
                     })}
@@ -416,7 +417,7 @@ export default function ThiThuClient() {
                   {submitted && (
                     <div className="mt-4 rounded-2xl border border-sea/20 bg-void-light/60 p-3.5 text-xs leading-relaxed text-star-soft">
                       <span className="font-bold text-sea-deep">💡 Lời giải chi tiết: </span>
-                      {q.explain}
+                      <MathText text={q.explain} />
                     </div>
                   )}
                 </div>
@@ -447,7 +448,7 @@ export default function ThiThuClient() {
                       {qIdx + 1}
                     </span>
                     <div className="flex-1 font-body text-sm font-semibold text-star leading-relaxed">
-                      {q.context}
+                      <MathText text={q.context} />
                     </div>
                   </div>
 
@@ -463,7 +464,7 @@ export default function ThiThuClient() {
                           className="rounded-2xl border border-white/10 bg-void/50 p-3.5 text-xs sm:text-sm"
                         >
                           <div className="text-star leading-relaxed mb-3">
-                            {s.text}
+                            <MathText text={s.text} />
                           </div>
 
                           <div className="flex items-center gap-2">
@@ -505,7 +506,7 @@ export default function ThiThuClient() {
                           {submitted && (
                             <div className="mt-2 text-xs text-star-soft/90 border-t border-white/5 pt-2">
                               <span className="text-gold-deep font-semibold">Giải thích: </span>
-                              {s.explain}
+                              <MathText text={s.explain} />
                             </div>
                           )}
                         </div>
@@ -549,7 +550,7 @@ export default function ThiThuClient() {
                       {qIdx + 1}
                     </span>
                     <div className="flex-1 font-body text-sm font-semibold text-star leading-relaxed">
-                      {q.q}
+                      <MathText text={q.q} />
                     </div>
                   </div>
 
@@ -584,7 +585,7 @@ export default function ThiThuClient() {
                   {submitted && (
                     <div className="mt-4 rounded-2xl border border-coral/20 bg-void-light/60 p-3.5 text-xs leading-relaxed text-star-soft">
                       <span className="font-bold text-coral-deep">💡 Lời giải chi tiết: </span>
-                      <pre className="mt-1 font-body whitespace-pre-wrap">{q.explain}</pre>
+                      <div className="mt-1 font-body whitespace-pre-wrap"><MathText text={q.explain} /></div>
                     </div>
                   )}
                 </div>

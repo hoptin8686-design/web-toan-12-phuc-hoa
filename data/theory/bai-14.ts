@@ -1,80 +1,33 @@
 import type { LessonTheory } from "@/lib/types";
 
 const bai14: LessonTheory = {
-  "intro": "Vectơ pháp tuyến và phương trình tổng quát của mặt phẳng trong không gian Oxyz, khoảng cách từ điểm đến mặt phẳng.",
+  "intro": "Phương trình tổng quát của mặt phẳng trong không gian Oxyz, vectơ pháp tuyến và vị trí tương đối giữa hai mặt phẳng.",
   "minutes": 15,
   "sections": [
     {
-      "id": "trong-tam",
-      "emoji": "💡",
-      "heading": "1. Kiến thức trọng tâm cần nhớ",
+      "id": "pt-mat-phang",
+      "emoji": "📄",
+      "heading": "1. Phương trình tổng quát của mặt phẳng",
       "blocks": [
         {
-          "kind": "cards",
-          "tone": "sea",
-          "items": [
-            {
-              "emoji": "📌",
-              "title": "Khái niệm cốt lõi",
-              "text": "Nắm vững định nghĩa, ý nghĩa hình học và giải tích của Bài 14. Phương trình mặt phẳng."
-            },
-            {
-              "emoji": "⚡",
-              "title": "Công thức then chốt",
-              "text": "Ghi nhớ chính xác công thức và các trường hợp ngoại lệ/điều kiện đi kèm."
-            },
-            {
-              "emoji": "🎯",
-              "title": "Kỹ năng giải bài",
-              "text": "Phân loại các dạng toán thường gặp từ nhận biết đến vận dụng cao."
-            }
-          ]
+          "kind": "mathBox",
+          "title": "Phương trình mặt phẳng đi qua điểm $M_0(x_0; y_0; z_0)$ có VTPT $\\vec{n} = (A; B; C)$",
+          "formula": "A(x - x_0) + B(y - y_0) + C(z - z_0) = 0 \\iff Ax + By + Cz + D = 0 \\quad (A^2 + B^2 + C^2 > 0)",
+          "note": "Nếu mặt phẳng có cặp VTCP $\\vec{a}, \\vec{b}$ không cùng phương thì VTPT là tích có hướng $\\vec{n} = [\\vec{a}, \\vec{b}]$."
         },
         {
           "kind": "mathBox",
-          "title": "Công thức trọng tâm",
-          "formula": "A(x - x_0) + B(y - y_0) + C(z - z_0) = 0 \\iff Ax + By + Cz + D = 0",
-          "note": "Học sinh cần nắm chắc điều kiện áp dụng của công thức."
-        }
-      ]
-    },
-    {
-      "id": "phuong-phap-giai",
-      "emoji": "🛠️",
-      "heading": "2. Phương pháp giải & Chú ý sai lầm thường gặp",
-      "blocks": [
-        {
-          "kind": "steps",
-          "items": [
-            {
-              "label": "Bước 1",
-              "title": "Phân tích đề",
-              "text": "Xác định rõ dữ kiện bài toán và điều kiện ràng buộc."
-            },
-            {
-              "label": "Bước 2",
-              "title": "Thiết lập phương trình / biểu thức",
-              "text": "Chuyển ngôn ngữ đề bài sang biểu thức toán học chính xác."
-            },
-            {
-              "label": "Bước 3",
-              "title": "Giải và biện luận",
-              "text": "Tính toán cẩn thận, loại trừ nghiệm không thoả mãn."
-            }
-          ]
-        },
-        {
-          "kind": "warn",
-          "title": "Bẫy thường gặp",
-          "text": "Quên tìm điều kiện xác định hoặc nhầm lẫn giữa các khái niệm tương tự nhau trong đề thi."
+          "title": "Phương trình mặt phẳng theo đoạn chắn",
+          "formula": "\\frac{x}{a} + \\frac{y}{b} + \\frac{z}{c} = 1",
+          "note": "Mặt phẳng cắt 3 trục toạ độ $Ox, Oy, Oz$ lần lượt tại $A(a; 0; 0), B(0; b; 0), C(0; 0; c)$ với $a, b, c \\ne 0$."
         }
       ]
     }
   ],
   "summary": [
-    "Nắm vững các khái niệm và công thức cốt lõi của Bài 14. Phương trình mặt phẳng.",
-    "Lưu ý điều kiện xác định và cạm bẫy toán học thường gặp.",
-    "Luyện tập thành thạo 3 dạng: Trắc nghiệm 4 lựa chọn, Đúng/Sai và Trả lời ngắn."
+    "Mặt phẳng hoàn toàn xác định khi biết 1 điểm đi qua và 1 vectơ pháp tuyến $\\vec{n}$.",
+    "Hai mặt phẳng vuông góc $\\iff$ hai VTPT vuông góc: $A_1 A_2 + B_1 B_2 + C_1 C_2 = 0$.",
+    "Hai mặt phẳng song song $\\iff \\frac{A_1}{A_2} = \\frac{B_1}{B_2} = \\frac{C_1}{C_2} \\ne \\frac{D_1}{D_2}$."
   ]
 };
 

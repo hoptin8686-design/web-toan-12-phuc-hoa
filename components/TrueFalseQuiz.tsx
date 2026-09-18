@@ -4,6 +4,7 @@ import { useState } from "react";
 import confetti from "canvas-confetti";
 import type { TFQuestion } from "@/lib/types";
 import { saveLessonProgress, tfKey } from "@/lib/progress";
+import MathText from "@/components/MathText";
 
 export default function TrueFalseQuiz({
   lessonId,
@@ -124,12 +125,12 @@ export default function TrueFalseQuiz({
             {/* Lời dẫn tình huống */}
             <div className="mt-3 rounded-xl border border-star/10 bg-[#07131b] p-4 text-[15px] leading-relaxed text-star">
               <p className="font-semibold text-sea-deep">Ngữ cảnh bài toán:</p>
-              <p className="mt-1 text-star/90">{currentQ.context}</p>
+              <div className="mt-1 text-star/90"><MathText text={currentQ.context} /></div>
             </div>
 
             {currentQ.math && (
-              <div className="mt-3 overflow-x-auto rounded-xl border border-star/10 bg-[#07131b] p-3 font-mono text-xs text-sea-deep">
-                {currentQ.math}
+              <div className="mt-3 overflow-x-auto rounded-xl border border-star/10 bg-[#07131b] p-3 text-xs text-sea-deep">
+                <MathText text={currentQ.math} block={true} />
               </div>
             )}
 
@@ -156,7 +157,7 @@ export default function TrueFalseQuiz({
                         <strong className="mr-1.5 font-mono text-base font-bold text-coral">
                           {label})
                         </strong>
-                        {st.text}
+                        <MathText text={st.text} />
                       </div>
 
                       {/* Hai nút Đúng / Sai */}
@@ -201,7 +202,9 @@ export default function TrueFalseQuiz({
                             <span className="text-berry">Em cần xem lại lý thuyết mục này.</span>
                           )}
                         </p>
-                        <p className="mt-1 text-star-soft leading-relaxed">{st.explain}</p>
+                        <div className="mt-1 text-star-soft leading-relaxed">
+                          <MathText text={st.explain} />
+                        </div>
                       </div>
                     )}
                   </div>

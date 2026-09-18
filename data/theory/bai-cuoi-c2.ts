@@ -1,80 +1,26 @@
 import type { LessonTheory } from "@/lib/types";
 
 const baicuoic2: LessonTheory = {
-  "intro": "Tổng ôn tập kiến thức trọng tâm, hệ thống hóa công thức và rèn luyện kỹ năng giải bài tập Chương II. Vectơ và hệ trục toạ độ không gian.",
-  "minutes": 15,
+  "intro": "Tổng kết Chương II: Phương pháp vectơ và Hệ toạ độ Oxyz giải các bài toán hình học không gian.",
+  "minutes": 20,
   "sections": [
     {
-      "id": "trong-tam",
-      "emoji": "💡",
-      "heading": "1. Kiến thức trọng tâm cần nhớ",
+      "id": "tong-ket-c2",
+      "emoji": "🌟",
+      "heading": "1. Tổng kết Chương II",
       "blocks": [
-        {
-          "kind": "cards",
-          "tone": "sea",
-          "items": [
-            {
-              "emoji": "📌",
-              "title": "Khái niệm cốt lõi",
-              "text": "Nắm vững định nghĩa, ý nghĩa hình học và giải tích của Bài tập cuối chương II."
-            },
-            {
-              "emoji": "⚡",
-              "title": "Công thức then chốt",
-              "text": "Ghi nhớ chính xác công thức và các trường hợp ngoại lệ/điều kiện đi kèm."
-            },
-            {
-              "emoji": "🎯",
-              "title": "Kỹ năng giải bài",
-              "text": "Phân loại các dạng toán thường gặp từ nhận biết đến vận dụng cao."
-            }
-          ]
-        },
         {
           "kind": "mathBox",
-          "title": "Công thức trọng tâm",
-          "formula": "\\text{Tổng ôn kiến thức & rèn luyện kỹ năng giải nhanh trắc nghiệm, đúng/sai, tự luận}",
-          "note": "Học sinh cần nắm chắc điều kiện áp dụng của công thức."
-        }
-      ]
-    },
-    {
-      "id": "phuong-phap-giai",
-      "emoji": "🛠️",
-      "heading": "2. Phương pháp giải & Chú ý sai lầm thường gặp",
-      "blocks": [
-        {
-          "kind": "steps",
-          "items": [
-            {
-              "label": "Bước 1",
-              "title": "Phân tích đề",
-              "text": "Xác định rõ dữ kiện bài toán và điều kiện ràng buộc."
-            },
-            {
-              "label": "Bước 2",
-              "title": "Thiết lập phương trình / biểu thức",
-              "text": "Chuyển ngôn ngữ đề bài sang biểu thức toán học chính xác."
-            },
-            {
-              "label": "Bước 3",
-              "title": "Giải và biện luận",
-              "text": "Tính toán cẩn thận, loại trừ nghiệm không thoả mãn."
-            }
-          ]
-        },
-        {
-          "kind": "warn",
-          "title": "Bẫy thường gặp",
-          "text": "Quên tìm điều kiện xác định hoặc nhầm lẫn giữa các khái niệm tương tự nhau trong đề thi."
+          "title": "Hệ thống toạ độ Oxyz",
+          "formula": "\\overrightarrow{AB} = (x_B - x_A; y_B - y_A; z_B - z_A); \\quad |\\vec{a}| = \\sqrt{x^2+y^2+z^2}; \\quad \\vec{a} \\cdot \\vec{b} = x_1 x_2 + y_1 y_2 + z_1 z_2",
+          "note": "Đặt hệ trục toạ độ $Oxyz$ vào hình lập phương, hình chóp để tính góc và khoảng cách."
         }
       ]
     }
   ],
   "summary": [
-    "Nắm vững các khái niệm và công thức cốt lõi của Bài tập cuối chương II.",
-    "Lưu ý điều kiện xác định và cạm bẫy toán học thường gặp.",
-    "Luyện tập thành thạo 3 dạng: Trắc nghiệm 4 lựa chọn, Đúng/Sai và Trả lời ngắn."
+    "Nắm vững các phép toán vectơ bằng toạ độ trong không gian.",
+    "Kỹ năng gắn hệ trục toạ độ $Oxyz$ vào khối đa diện cổ điển."
   ]
 };
 

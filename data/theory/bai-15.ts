@@ -1,80 +1,27 @@
 import type { LessonTheory } from "@/lib/types";
 
 const bai15: LessonTheory = {
-  "intro": "Phương trình tham số và phương trình chính tắc của đường thẳng trong không gian Oxyz, vị trí tương đối giữa các đường thẳng.",
+  "intro": "Phương trình tham số và phương trình chính tắc của đường thẳng trong không gian Oxyz, vị trí tương đối giữa hai đường thẳng.",
   "minutes": 15,
   "sections": [
     {
-      "id": "trong-tam",
-      "emoji": "💡",
-      "heading": "1. Kiến thức trọng tâm cần nhớ",
+      "id": "pt-duong-thang",
+      "emoji": "📏",
+      "heading": "1. Phương trình đường thẳng trong không gian",
       "blocks": [
-        {
-          "kind": "cards",
-          "tone": "sea",
-          "items": [
-            {
-              "emoji": "📌",
-              "title": "Khái niệm cốt lõi",
-              "text": "Nắm vững định nghĩa, ý nghĩa hình học và giải tích của Bài 15. Phương trình đường thẳng trong không gian."
-            },
-            {
-              "emoji": "⚡",
-              "title": "Công thức then chốt",
-              "text": "Ghi nhớ chính xác công thức và các trường hợp ngoại lệ/điều kiện đi kèm."
-            },
-            {
-              "emoji": "🎯",
-              "title": "Kỹ năng giải bài",
-              "text": "Phân loại các dạng toán thường gặp từ nhận biết đến vận dụng cao."
-            }
-          ]
-        },
         {
           "kind": "mathBox",
-          "title": "Công thức trọng tâm",
-          "formula": "\\begin{cases} x = x_0 + at \\\\ y = y_0 + bt \\\\ z = z_0 + ct \\end{cases} \\iff \\frac{x - x_0}{a} = \\frac{y - y_0}{b} = \\frac{z - z_0}{c}",
-          "note": "Học sinh cần nắm chắc điều kiện áp dụng của công thức."
-        }
-      ]
-    },
-    {
-      "id": "phuong-phap-giai",
-      "emoji": "🛠️",
-      "heading": "2. Phương pháp giải & Chú ý sai lầm thường gặp",
-      "blocks": [
-        {
-          "kind": "steps",
-          "items": [
-            {
-              "label": "Bước 1",
-              "title": "Phân tích đề",
-              "text": "Xác định rõ dữ kiện bài toán và điều kiện ràng buộc."
-            },
-            {
-              "label": "Bước 2",
-              "title": "Thiết lập phương trình / biểu thức",
-              "text": "Chuyển ngôn ngữ đề bài sang biểu thức toán học chính xác."
-            },
-            {
-              "label": "Bước 3",
-              "title": "Giải và biện luận",
-              "text": "Tính toán cẩn thận, loại trừ nghiệm không thoả mãn."
-            }
-          ]
-        },
-        {
-          "kind": "warn",
-          "title": "Bẫy thường gặp",
-          "text": "Quên tìm điều kiện xác định hoặc nhầm lẫn giữa các khái niệm tương tự nhau trong đề thi."
+          "title": "Phương trình tham số và chính tắc của đường thẳng qua $M_0$ có VTCP $\\vec{u} = (a; b; c)$",
+          "formula": "\\begin{cases} x = x_0 + at \\\\ y = y_0 + bt \\\\ z = z_0 + ct \\end{cases} (t \\in \\mathbb{R}); \\qquad \\frac{x - x_0}{a} = \\frac{y - y_0}{b} = \\frac{z - z_0}{c} \\quad (a, b, c \\ne 0)",
+          "note": "Đường thẳng hoàn toàn xác định khi biết 1 điểm đi qua và 1 vectơ chỉ phương $\\vec{u} \\ne \\vec{0}$."
         }
       ]
     }
   ],
   "summary": [
-    "Nắm vững các khái niệm và công thức cốt lõi của Bài 15. Phương trình đường thẳng trong không gian.",
-    "Lưu ý điều kiện xác định và cạm bẫy toán học thường gặp.",
-    "Luyện tập thành thạo 3 dạng: Trắc nghiệm 4 lựa chọn, Đúng/Sai và Trả lời ngắn."
+    "Vectơ chỉ phương $\\vec{u} = (a; b; c)$ có giá song song hoặc trùng với đường thẳng.",
+    "Muốn chuyển từ PT chính tắc sang tham số: đặt các tỉ số bằng $t$ rồi rút $x, y, z$.",
+    "Hai đường thẳng trong không gian có 4 vị trí tương đối: cắt nhau, song song, trùng nhau hoặc chéo nhau."
   ]
 };
 

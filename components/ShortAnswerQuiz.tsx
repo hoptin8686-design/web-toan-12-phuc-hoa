@@ -4,6 +4,7 @@ import { useState } from "react";
 import confetti from "canvas-confetti";
 import type { ShortAnswerQuestion } from "@/lib/types";
 import { saveLessonProgress, saKey } from "@/lib/progress";
+import MathText from "@/components/MathText";
 
 function normalizeAns(val: string): string {
   return val
@@ -213,12 +214,12 @@ export default function ShortAnswerQuiz({
             </div>
 
             <div className="mt-4 font-body text-base text-star leading-relaxed">
-              {currentQ.q}
+              <MathText text={currentQ.q} />
             </div>
 
             {currentQ.math && (
-              <div className="mt-3 rounded-xl bg-void-light/60 p-4 font-mono text-sm text-sea-deep border border-star/5 overflow-x-auto">
-                {currentQ.math}
+              <div className="mt-3 rounded-xl bg-void-light/60 p-4 text-sm text-sea-deep border border-star/5 overflow-x-auto">
+                <MathText text={currentQ.math} block={true} />
               </div>
             )}
 
@@ -287,7 +288,7 @@ export default function ShortAnswerQuiz({
                   <span className="text-star-soft">
                     Đáp án chuẩn:{" "}
                     <strong className="font-mono text-leaf-deep text-sm">
-                      {currentQ.correctAnswer} {currentQ.unit ?? ""}
+                      <MathText text={currentQ.correctAnswer} /> {currentQ.unit ?? ""}
                     </strong>
                   </span>
                   <span className="text-star-soft">
@@ -302,9 +303,9 @@ export default function ShortAnswerQuiz({
                   <p className="text-xs font-bold text-sea-deep uppercase tracking-wider mb-1">
                     📖 Lời giải chi tiết & Phương pháp:
                   </p>
-                  <p className="font-body text-xs sm:text-sm text-star/90 whitespace-pre-line leading-relaxed">
-                    {currentQ.explain}
-                  </p>
+                  <div className="font-body text-xs sm:text-sm text-star/90 whitespace-pre-line leading-relaxed">
+                    <MathText text={currentQ.explain} />
+                  </div>
                 </div>
               </div>
             )}

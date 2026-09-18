@@ -1,80 +1,40 @@
 import type { LessonTheory } from "@/lib/types";
 
 const bai03: LessonTheory = {
-  "intro": "Khái niệm và phương pháp xác định tiệm cận đứng, tiệm cận ngang và tiệm cận xiên.",
+  "intro": "Phương pháp xác định tiệm cận đứng, tiệm cận ngang và tiệm cận xiên của đồ thị hàm số.",
   "minutes": 15,
   "sections": [
     {
-      "id": "trong-tam",
-      "emoji": "💡",
-      "heading": "1. Kiến thức trọng tâm cần nhớ",
+      "id": "dung-ngang",
+      "emoji": "📏",
+      "heading": "1. Tiệm cận đứng và Tiệm cận ngang",
       "blocks": [
         {
-          "kind": "cards",
-          "tone": "sea",
-          "items": [
-            {
-              "emoji": "📌",
-              "title": "Khái niệm cốt lõi",
-              "text": "Nắm vững định nghĩa, ý nghĩa hình học và giải tích của Bài 3. Đường tiệm cận của đồ thị hàm số."
-            },
-            {
-              "emoji": "⚡",
-              "title": "Công thức then chốt",
-              "text": "Ghi nhớ chính xác công thức và các trường hợp ngoại lệ/điều kiện đi kèm."
-            },
-            {
-              "emoji": "🎯",
-              "title": "Kỹ năng giải bài",
-              "text": "Phân loại các dạng toán thường gặp từ nhận biết đến vận dụng cao."
-            }
-          ]
-        },
-        {
           "kind": "mathBox",
-          "title": "Công thức trọng tâm",
-          "formula": "\\lim_{x \\to \\pm\\infty} [f(x) - (ax + b)] = 0 \\implies y = ax + b \\text{ là tiệm cận xiên}",
-          "note": "Học sinh cần nắm chắc điều kiện áp dụng của công thức."
+          "title": "Tiệm cận đứng và Tiệm cận ngang",
+          "formula": "\\lim_{x \\to x_0^\\pm} f(x) = \\pm\\infty \\implies x = x_0 \\text{ (TCĐ)}; \\qquad \\lim_{x \\to \\pm\\infty} f(x) = y_0 \\implies y = y_0 \\text{ (TCN)}",
+          "note": "Đồ thị hàm số $y = \\frac{ax+b}{cx+d}$ luôn có TCĐ: $x = -\\frac{d}{c}$ và TCN: $y = \\frac{a}{c}$."
         }
       ]
     },
     {
-      "id": "phuong-phap-giai",
-      "emoji": "🛠️",
-      "heading": "2. Phương pháp giải & Chú ý sai lầm thường gặp",
+      "id": "xien",
+      "emoji": "📐",
+      "heading": "2. Tiệm cận xiên (GDPT 2018)",
       "blocks": [
         {
-          "kind": "steps",
-          "items": [
-            {
-              "label": "Bước 1",
-              "title": "Phân tích đề",
-              "text": "Xác định rõ dữ kiện bài toán và điều kiện ràng buộc."
-            },
-            {
-              "label": "Bước 2",
-              "title": "Thiết lập phương trình / biểu thức",
-              "text": "Chuyển ngôn ngữ đề bài sang biểu thức toán học chính xác."
-            },
-            {
-              "label": "Bước 3",
-              "title": "Giải và biện luận",
-              "text": "Tính toán cẩn thận, loại trừ nghiệm không thoả mãn."
-            }
-          ]
-        },
-        {
-          "kind": "warn",
-          "title": "Bẫy thường gặp",
-          "text": "Quên tìm điều kiện xác định hoặc nhầm lẫn giữa các khái niệm tương tự nhau trong đề thi."
+          "kind": "mathBox",
+          "title": "Định nghĩa và công thức tính hệ số Tiệm cận xiên $y = ax + b$",
+          "formula": "a = \\lim_{x \\to \\pm\\infty} \\frac{f(x)}{x} \\quad (a \\ne 0); \\qquad b = \\lim_{x \\to \\pm\\infty} [f(x) - ax]",
+          "note": "Với phân thức bậc 2 trên bậc 1: Chia tử cho mẫu $f(x) = ax + b + \\frac{r}{cx+d} \\implies y = ax + b$ là tiệm cận xiên."
         }
       ]
     }
   ],
   "summary": [
-    "Nắm vững các khái niệm và công thức cốt lõi của Bài 3. Đường tiệm cận của đồ thị hàm số.",
-    "Lưu ý điều kiện xác định và cạm bẫy toán học thường gặp.",
-    "Luyện tập thành thạo 3 dạng: Trắc nghiệm 4 lựa chọn, Đúng/Sai và Trả lời ngắn."
+    "TCĐ là nghiệm của mẫu làm tử khác 0.",
+    "Bậc tử $\\le$ bậc mẫu $\\implies$ có tiệm cận ngang.",
+    "Bậc tử = bậc mẫu + 1 $\\implies$ đồ thị có tiệm cận xiên $y = ax + b$."
   ]
 };
 

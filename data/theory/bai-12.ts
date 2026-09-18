@@ -1,80 +1,61 @@
 import type { LessonTheory } from "@/lib/types";
 
 const bai12: LessonTheory = {
-  "intro": "Định nghĩa tích phân, công thức Newton-Leibniz, các tính chất và phương pháp đổi biến số, tích phân từng phần.",
+  "intro": "Định nghĩa tích phân theo công thức Newton-Leibniz, các tính chất cơ bản, phương pháp đổi biến số và tích phân từng phần.",
   "minutes": 15,
   "sections": [
     {
-      "id": "trong-tam",
-      "emoji": "💡",
-      "heading": "1. Kiến thức trọng tâm cần nhớ",
+      "id": "dinh-nghia-tich-phan",
+      "emoji": "🎯",
+      "heading": "1. Công thức Newton - Leibniz và Tính chất",
       "blocks": [
         {
-          "kind": "cards",
-          "tone": "sea",
-          "items": [
-            {
-              "emoji": "📌",
-              "title": "Khái niệm cốt lõi",
-              "text": "Nắm vững định nghĩa, ý nghĩa hình học và giải tích của Bài 12. Tích phân."
-            },
-            {
-              "emoji": "⚡",
-              "title": "Công thức then chốt",
-              "text": "Ghi nhớ chính xác công thức và các trường hợp ngoại lệ/điều kiện đi kèm."
-            },
-            {
-              "emoji": "🎯",
-              "title": "Kỹ năng giải bài",
-              "text": "Phân loại các dạng toán thường gặp từ nhận biết đến vận dụng cao."
-            }
-          ]
+          "kind": "mathBox",
+          "title": "Công thức Newton - Leibniz",
+          "formula": "\\int_a^b f(x) dx = F(b) - F(a) = \\left. F(x) \\right|_a^b",
+          "note": "Tích phân chỉ phụ thuộc vào hàm số $f$ và các cận $a, b$, không phụ thuộc vào biến số: $\\int_a^b f(x)dx = \\int_a^b f(t)dt$."
         },
         {
-          "kind": "mathBox",
-          "title": "Công thức trọng tâm",
-          "formula": "\\int_a^b f(x) dx = F(b) - F(a), \\quad \\int u dv = uv - \\int v du",
-          "note": "Học sinh cần nắm chắc điều kiện áp dụng của công thức."
+          "kind": "cards",
+          "tone": "leaf",
+          "items": [
+            {
+              "emoji": "🔄",
+              "title": "Đổi cận đảo dấu",
+              "text": "$\\int_a^b f(x)dx = -\\int_b^a f(x)dx$; $\\int_a^a f(x)dx = 0$."
+            },
+            {
+              "emoji": "🔗",
+              "title": "Chèn cận liên tiếp",
+              "text": "$\\int_a^b f(x)dx = \\int_a^c f(x)dx + \\int_c^b f(x)dx$ với mọi $a, b, c$."
+            },
+            {
+              "emoji": "✨",
+              "title": "Tuyến tính",
+              "text": "$\\int_a^b [k f(x) + m g(x)]dx = k \\int_a^b f(x)dx + m \\int_a^b g(x)dx$."
+            }
+          ]
         }
       ]
     },
     {
-      "id": "phuong-phap-giai",
+      "id": "phuong-phap-tinh",
       "emoji": "🛠️",
-      "heading": "2. Phương pháp giải & Chú ý sai lầm thường gặp",
+      "heading": "2. Hai phương pháp tính tích phân then chốt",
       "blocks": [
         {
-          "kind": "steps",
-          "items": [
-            {
-              "label": "Bước 1",
-              "title": "Phân tích đề",
-              "text": "Xác định rõ dữ kiện bài toán và điều kiện ràng buộc."
-            },
-            {
-              "label": "Bước 2",
-              "title": "Thiết lập phương trình / biểu thức",
-              "text": "Chuyển ngôn ngữ đề bài sang biểu thức toán học chính xác."
-            },
-            {
-              "label": "Bước 3",
-              "title": "Giải và biện luận",
-              "text": "Tính toán cẩn thận, loại trừ nghiệm không thoả mãn."
-            }
-          ]
-        },
-        {
-          "kind": "warn",
-          "title": "Bẫy thường gặp",
-          "text": "Quên tìm điều kiện xác định hoặc nhầm lẫn giữa các khái niệm tương tự nhau trong đề thi."
+          "kind": "mathBox",
+          "title": "Phương pháp đổi biến số & Từng phần",
+          "formula": "\\int_a^b f(u(x)) u'(x) dx = \\int_{u(a)}^{u(b)} f(u) du; \\qquad \\int_a^b u \\, dv = \\left. uv \\right|_a^b - \\int_a^b v \\, du",
+          "note": "Đổi biến số BẮT BUỘC phải đổi cận! Tích phân từng phần tuân theo thứ tự ưu tiên đặt $u$: 'Nhất log, nhì đa, tam lượng, tứ mũ'."
         }
       ]
     }
   ],
   "summary": [
-    "Nắm vững các khái niệm và công thức cốt lõi của Bài 12. Tích phân.",
-    "Lưu ý điều kiện xác định và cạm bẫy toán học thường gặp.",
-    "Luyện tập thành thạo 3 dạng: Trắc nghiệm 4 lựa chọn, Đúng/Sai và Trả lời ngắn."
+    "Tích phân là một số thực, trong khi nguyên hàm là một họ hàm số.",
+    "Tích phân từng phần dùng công thức $\\int u dv = uv - \\int v du$.",
+    "Đổi biến số thì phải đổi cận tương ứng từ $x$ sang $u$."
   ]
 };
 

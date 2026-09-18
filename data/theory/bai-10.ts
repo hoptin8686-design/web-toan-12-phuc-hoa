@@ -1,80 +1,33 @@
 import type { LessonTheory } from "@/lib/types";
 
 const bai10: LessonTheory = {
-  "intro": "Phương sai s^2 và độ lệch chuẩn s của mẫu số liệu ghép nhóm: đo mức độ biến động quanh số trung bình.",
+  "intro": "Phương sai $s^2$ và Độ lệch chuẩn $s$ của mẫu số liệu ghép nhóm — các đại lượng đo mức độ phân tán quanh số trung bình.",
   "minutes": 15,
   "sections": [
     {
-      "id": "trong-tam",
-      "emoji": "💡",
-      "heading": "1. Kiến thức trọng tâm cần nhớ",
+      "id": "phuong-sai-do-lech-chuan",
+      "emoji": "📉",
+      "heading": "1. Công thức Phương sai và Độ lệch chuẩn",
       "blocks": [
         {
-          "kind": "cards",
-          "tone": "sea",
-          "items": [
-            {
-              "emoji": "📌",
-              "title": "Khái niệm cốt lõi",
-              "text": "Nắm vững định nghĩa, ý nghĩa hình học và giải tích của Bài 10. Phương sai và độ lệch chuẩn."
-            },
-            {
-              "emoji": "⚡",
-              "title": "Công thức then chốt",
-              "text": "Ghi nhớ chính xác công thức và các trường hợp ngoại lệ/điều kiện đi kèm."
-            },
-            {
-              "emoji": "🎯",
-              "title": "Kỹ năng giải bài",
-              "text": "Phân loại các dạng toán thường gặp từ nhận biết đến vận dụng cao."
-            }
-          ]
+          "kind": "mathBox",
+          "title": "Số trung bình và Phương sai mẫu ghép nhóm",
+          "formula": "\\bar{x} = \\frac{1}{n} \\sum_{i=1}^k n_i c_i; \\qquad s^2 = \\frac{1}{n} \\sum_{i=1}^k n_i (c_i - \\bar{x})^2 = \\frac{1}{n} \\sum_{i=1}^k n_i c_i^2 - (\\bar{x})^2",
+          "note": "Trong đó $c_i = \\frac{a_{i-1} + a_i}{2}$ là giá trị đại diện của nhóm thứ $i$, $n_i$ là tần số, $n$ là cỡ mẫu."
         },
         {
           "kind": "mathBox",
-          "title": "Công thức trọng tâm",
-          "formula": "s^2 = \\frac{1}{n} \\sum_{i=1}^k m_i (c_i - \\bar{x})^2, \\quad s = \\sqrt{s^2}",
-          "note": "Học sinh cần nắm chắc điều kiện áp dụng của công thức."
-        }
-      ]
-    },
-    {
-      "id": "phuong-phap-giai",
-      "emoji": "🛠️",
-      "heading": "2. Phương pháp giải & Chú ý sai lầm thường gặp",
-      "blocks": [
-        {
-          "kind": "steps",
-          "items": [
-            {
-              "label": "Bước 1",
-              "title": "Phân tích đề",
-              "text": "Xác định rõ dữ kiện bài toán và điều kiện ràng buộc."
-            },
-            {
-              "label": "Bước 2",
-              "title": "Thiết lập phương trình / biểu thức",
-              "text": "Chuyển ngôn ngữ đề bài sang biểu thức toán học chính xác."
-            },
-            {
-              "label": "Bước 3",
-              "title": "Giải và biện luận",
-              "text": "Tính toán cẩn thận, loại trừ nghiệm không thoả mãn."
-            }
-          ]
-        },
-        {
-          "kind": "warn",
-          "title": "Bẫy thường gặp",
-          "text": "Quên tìm điều kiện xác định hoặc nhầm lẫn giữa các khái niệm tương tự nhau trong đề thi."
+          "title": "Độ lệch chuẩn",
+          "formula": "s = \\sqrt{s^2}",
+          "note": "Độ lệch chuẩn có cùng đơn vị đo với dữ liệu ban đầu, phản ánh độ phân tán thực tế quanh số trung bình."
         }
       ]
     }
   ],
   "summary": [
-    "Nắm vững các khái niệm và công thức cốt lõi của Bài 10. Phương sai và độ lệch chuẩn.",
-    "Lưu ý điều kiện xác định và cạm bẫy toán học thường gặp.",
-    "Luyện tập thành thạo 3 dạng: Trắc nghiệm 4 lựa chọn, Đúng/Sai và Trả lời ngắn."
+    "Phương sai và độ lệch chuẩn càng nhỏ thì dữ liệu càng tập trung, độ đồng đều càng cao.",
+    "Áp dụng hiệu quả để so sánh độ ổn định năng suất cây trồng, thành tích học tập, độ tin cậy của thiết bị máy móc.",
+    "Có thể dùng máy tính cầm tay (chế độ Thống kê 1 biến) để tính nhanh $\\bar{x}$ và $s$."
   ]
 };
 

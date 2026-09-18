@@ -1,80 +1,48 @@
 import type { LessonTheory } from "@/lib/types";
 
 const bai17: LessonTheory = {
-  "intro": "Phương trình mặt cầu trong không gian Oxyz: tâm I(a; b; c), bán kính R và điều kiện phương trình tổng quát.",
+  "intro": "Phương trình mặt cầu trong không gian Oxyz, toạ độ tâm, bán kính và vị trí tương đối giữa mặt cầu và mặt phẳng.",
   "minutes": 15,
   "sections": [
     {
-      "id": "trong-tam",
-      "emoji": "💡",
-      "heading": "1. Kiến thức trọng tâm cần nhớ",
+      "id": "pt-mat-cau",
+      "emoji": "⚽",
+      "heading": "1. Phương trình mặt cầu",
       "blocks": [
         {
+          "kind": "mathBox",
+          "title": "Phương trình chính tắc và tổng quát của mặt cầu tâm $I(a; b; c)$ bán kính $R$",
+          "formula": "(x - a)^2 + (y - b)^2 + (z - c)^2 = R^2 \\iff x^2 + y^2 + z^2 - 2ax - 2by - 2cz + d = 0",
+          "note": "Điều kiện để phương trình tổng quát là mặt cầu: $a^2 + b^2 + c^2 - d > 0$. Khi đó bán kính $R = \\sqrt{a^2 + b^2 + c^2 - d}$."
+        },
+        {
           "kind": "cards",
-          "tone": "sea",
+          "tone": "gold",
           "items": [
             {
-              "emoji": "📌",
-              "title": "Khái niệm cốt lõi",
-              "text": "Nắm vững định nghĩa, ý nghĩa hình học và giải tích của Bài 17. Phương trình mặt cầu."
-            },
-            {
-              "emoji": "⚡",
-              "title": "Công thức then chốt",
-              "text": "Ghi nhớ chính xác công thức và các trường hợp ngoại lệ/điều kiện đi kèm."
+              "emoji": "🚫",
+              "title": "$d(I, (\\alpha)) > R$",
+              "text": "Mặt phẳng và mặt cầu không có điểm chung."
             },
             {
               "emoji": "🎯",
-              "title": "Kỹ năng giải bài",
-              "text": "Phân loại các dạng toán thường gặp từ nhận biết đến vận dụng cao."
-            }
-          ]
-        },
-        {
-          "kind": "mathBox",
-          "title": "Công thức trọng tâm",
-          "formula": "(x - a)^2 + (y - b)^2 + (z - c)^2 = R^2 \\iff x^2 + y^2 + z^2 - 2ax - 2by - 2cz + d = 0 \\quad (a^2+b^2+c^2 - d > 0)",
-          "note": "Học sinh cần nắm chắc điều kiện áp dụng của công thức."
-        }
-      ]
-    },
-    {
-      "id": "phuong-phap-giai",
-      "emoji": "🛠️",
-      "heading": "2. Phương pháp giải & Chú ý sai lầm thường gặp",
-      "blocks": [
-        {
-          "kind": "steps",
-          "items": [
-            {
-              "label": "Bước 1",
-              "title": "Phân tích đề",
-              "text": "Xác định rõ dữ kiện bài toán và điều kiện ràng buộc."
+              "title": "$d(I, (\\alpha)) = R$",
+              "text": "Mặt phẳng tiếp xúc với mặt cầu tại một điểm duy nhất (mặt phẳng tiếp diện)."
             },
             {
-              "label": "Bước 2",
-              "title": "Thiết lập phương trình / biểu thức",
-              "text": "Chuyển ngôn ngữ đề bài sang biểu thức toán học chính xác."
-            },
-            {
-              "label": "Bước 3",
-              "title": "Giải và biện luận",
-              "text": "Tính toán cẩn thận, loại trừ nghiệm không thoả mãn."
+              "emoji": "⭕",
+              "title": "$d(I, (\\alpha)) < R$",
+              "text": "Mặt phẳng cắt mặt cầu theo đường tròn giao tuyến có bán kính $r = \\sqrt{R^2 - d^2}$."
             }
           ]
-        },
-        {
-          "kind": "warn",
-          "title": "Bẫy thường gặp",
-          "text": "Quên tìm điều kiện xác định hoặc nhầm lẫn giữa các khái niệm tương tự nhau trong đề thi."
         }
       ]
     }
   ],
   "summary": [
-    "Nắm vững các khái niệm và công thức cốt lõi của Bài 17. Phương trình mặt cầu.",
-    "Lưu ý điều kiện xác định và cạm bẫy toán học thường gặp.",
-    "Luyện tập thành thạo 3 dạng: Trắc nghiệm 4 lựa chọn, Đúng/Sai và Trả lời ngắn."
+    "Mặt cầu hoàn toàn xác định khi biết toạ độ tâm $I(a; b; c)$ và độ dài bán kính $R > 0$.",
+    "Đường kính $AB \\implies$ tâm $I$ là trung điểm $AB$ và bán kính $R = \\frac{AB}{2}$.",
+    "Giao tuyến của mặt cầu và mặt phẳng khi cắt nhau là đường tròn có bán kính $r = \\sqrt{R^2 - d^2}$."
   ]
 };
 

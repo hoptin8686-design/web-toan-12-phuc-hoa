@@ -1,80 +1,26 @@
 import type { LessonTheory } from "@/lib/types";
 
 const baicuoic4: LessonTheory = {
-  "intro": "Tổng ôn tập kiến thức trọng tâm, hệ thống hóa công thức và rèn luyện kỹ năng giải bài tập Chương IV. Nguyên hàm và tích phân.",
-  "minutes": 15,
+  "intro": "Ôn tập tổng kết Chương IV: Nguyên hàm, Tích phân, Ứng dụng tính diện tích hình phẳng, thể tích khối tròn xoay và chuyển động.",
+  "minutes": 20,
   "sections": [
     {
-      "id": "trong-tam",
-      "emoji": "💡",
-      "heading": "1. Kiến thức trọng tâm cần nhớ",
+      "id": "tong-ket-c4",
+      "emoji": "🌟",
+      "heading": "1. Hệ thống công thức Chương IV",
       "blocks": [
-        {
-          "kind": "cards",
-          "tone": "sea",
-          "items": [
-            {
-              "emoji": "📌",
-              "title": "Khái niệm cốt lõi",
-              "text": "Nắm vững định nghĩa, ý nghĩa hình học và giải tích của Bài tập cuối chương IV."
-            },
-            {
-              "emoji": "⚡",
-              "title": "Công thức then chốt",
-              "text": "Ghi nhớ chính xác công thức và các trường hợp ngoại lệ/điều kiện đi kèm."
-            },
-            {
-              "emoji": "🎯",
-              "title": "Kỹ năng giải bài",
-              "text": "Phân loại các dạng toán thường gặp từ nhận biết đến vận dụng cao."
-            }
-          ]
-        },
         {
           "kind": "mathBox",
-          "title": "Công thức trọng tâm",
-          "formula": "\\text{Tổng ôn kiến thức & rèn luyện kỹ năng giải nhanh trắc nghiệm, đúng/sai, tự luận}",
-          "note": "Học sinh cần nắm chắc điều kiện áp dụng của công thức."
-        }
-      ]
-    },
-    {
-      "id": "phuong-phap-giai",
-      "emoji": "🛠️",
-      "heading": "2. Phương pháp giải & Chú ý sai lầm thường gặp",
-      "blocks": [
-        {
-          "kind": "steps",
-          "items": [
-            {
-              "label": "Bước 1",
-              "title": "Phân tích đề",
-              "text": "Xác định rõ dữ kiện bài toán và điều kiện ràng buộc."
-            },
-            {
-              "label": "Bước 2",
-              "title": "Thiết lập phương trình / biểu thức",
-              "text": "Chuyển ngôn ngữ đề bài sang biểu thức toán học chính xác."
-            },
-            {
-              "label": "Bước 3",
-              "title": "Giải và biện luận",
-              "text": "Tính toán cẩn thận, loại trừ nghiệm không thoả mãn."
-            }
-          ]
-        },
-        {
-          "kind": "warn",
-          "title": "Bẫy thường gặp",
-          "text": "Quên tìm điều kiện xác định hoặc nhầm lẫn giữa các khái niệm tương tự nhau trong đề thi."
+          "title": "Bộ ba công thức giải tích tích phân",
+          "formula": "\\int_a^b f(x)dx = F(b) - F(a); \\quad S = \\int_a^b |f(x) - g(x)|dx; \\quad V = \\pi \\int_a^b [f(x)]^2 dx",
+          "note": "Bài toán vận tốc - quãng đường: $s(t) = \\int v(t)dt$ và $v(t) = \\int a(t)dt$."
         }
       ]
     }
   ],
   "summary": [
-    "Nắm vững các khái niệm và công thức cốt lõi của Bài tập cuối chương IV.",
-    "Lưu ý điều kiện xác định và cạm bẫy toán học thường gặp.",
-    "Luyện tập thành thạo 3 dạng: Trắc nghiệm 4 lựa chọn, Đúng/Sai và Trả lời ngắn."
+    "Nắm vững 2 kỹ thuật then chốt: Đổi biến số và Tích phân từng phần.",
+    "Vận dụng tính diện tích và thể tích hình học vào các bài toán thực tiễn 2025."
   ]
 };
 

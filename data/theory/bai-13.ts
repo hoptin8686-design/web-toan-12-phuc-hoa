@@ -1,80 +1,40 @@
 import type { LessonTheory } from "@/lib/types";
 
 const bai13: LessonTheory = {
-  "intro": "Ứng dụng hình học của tích phân: tính diện tích hình phẳng và thể tích khối tròn xoay.",
+  "intro": "Ứng dụng hình học của tích phân: Tính diện tích hình phẳng và thể tích khối tròn xoay.",
   "minutes": 15,
   "sections": [
     {
-      "id": "trong-tam",
-      "emoji": "💡",
-      "heading": "1. Kiến thức trọng tâm cần nhớ",
+      "id": "dien-tich",
+      "emoji": "📐",
+      "heading": "1. Tính diện tích hình phẳng",
       "blocks": [
         {
-          "kind": "cards",
-          "tone": "sea",
-          "items": [
-            {
-              "emoji": "📌",
-              "title": "Khái niệm cốt lõi",
-              "text": "Nắm vững định nghĩa, ý nghĩa hình học và giải tích của Bài 13. Ứng dụng hình học của tích phân."
-            },
-            {
-              "emoji": "⚡",
-              "title": "Công thức then chốt",
-              "text": "Ghi nhớ chính xác công thức và các trường hợp ngoại lệ/điều kiện đi kèm."
-            },
-            {
-              "emoji": "🎯",
-              "title": "Kỹ năng giải bài",
-              "text": "Phân loại các dạng toán thường gặp từ nhận biết đến vận dụng cao."
-            }
-          ]
-        },
-        {
           "kind": "mathBox",
-          "title": "Công thức trọng tâm",
-          "formula": "S = \\int_a^b |f(x) - g(x)| dx, \\quad V = \\pi \\int_a^b [f(x)]^2 dx",
-          "note": "Học sinh cần nắm chắc điều kiện áp dụng của công thức."
+          "title": "Diện tích hình phẳng giới hạn bởi đồ thị hàm số",
+          "formula": "S = \\int_a^b |f(x)| dx; \\qquad S = \\int_a^b |f(x) - g(x)| dx",
+          "note": "Khi tính diện tích giới hạn bởi 2 đồ thị, các cận $a, b$ là nghiệm của phương trình hoành độ giao điểm $f(x) = g(x)$."
         }
       ]
     },
     {
-      "id": "phuong-phap-giai",
-      "emoji": "🛠️",
-      "heading": "2. Phương pháp giải & Chú ý sai lầm thường gặp",
+      "id": "the-tich",
+      "emoji": "🏺",
+      "heading": "2. Tính thể tích khối tròn xoay",
       "blocks": [
         {
-          "kind": "steps",
-          "items": [
-            {
-              "label": "Bước 1",
-              "title": "Phân tích đề",
-              "text": "Xác định rõ dữ kiện bài toán và điều kiện ràng buộc."
-            },
-            {
-              "label": "Bước 2",
-              "title": "Thiết lập phương trình / biểu thức",
-              "text": "Chuyển ngôn ngữ đề bài sang biểu thức toán học chính xác."
-            },
-            {
-              "label": "Bước 3",
-              "title": "Giải và biện luận",
-              "text": "Tính toán cẩn thận, loại trừ nghiệm không thoả mãn."
-            }
-          ]
-        },
-        {
-          "kind": "warn",
-          "title": "Bẫy thường gặp",
-          "text": "Quên tìm điều kiện xác định hoặc nhầm lẫn giữa các khái niệm tương tự nhau trong đề thi."
+          "kind": "mathBox",
+          "title": "Thể tích vật thể tròn xoay quanh trục Ox",
+          "formula": "V = \\pi \\int_a^b [f(x)]^2 dx; \\qquad V = \\pi \\int_a^b |f^2(x) - g^2(x)| dx",
+          "note": "Luôn nhớ có hệ số $\\pi$ phía trước dấu tích phân và biểu thức hàm số phải bình phương!"
         }
       ]
     }
   ],
   "summary": [
-    "Nắm vững các khái niệm và công thức cốt lõi của Bài 13. Ứng dụng hình học của tích phân.",
-    "Lưu ý điều kiện xác định và cạm bẫy toán học thường gặp.",
-    "Luyện tập thành thạo 3 dạng: Trắc nghiệm 4 lựa chọn, Đúng/Sai và Trả lời ngắn."
+    "Diện tích hình phẳng: tích phân trị tuyệt đối $|f(x) - g(x)|$.",
+    "Thể tích quay quanh $Ox$: có hệ số $\\pi$ và bình phương hàm số $[f(x)]^2$.",
+    "Ứng dụng thực tiễn để tính thể tích thùng chứa, phao cứu sinh, bình gốm sứ."
   ]
 };
 

@@ -1,80 +1,36 @@
 import type { LessonTheory } from "@/lib/types";
 
 const baicuoic3: LessonTheory = {
-  "intro": "Tổng ôn tập kiến thức trọng tâm, hệ thống hóa công thức và rèn luyện kỹ năng giải bài tập Chương III. Thống kê ghép nhóm.",
-  "minutes": 15,
+  "intro": "Ôn tập tổng kết Chương III: Mẫu số liệu ghép nhóm, Số trung bình, Khoảng biến thiên, Tứ phân vị, Phương sai và Độ lệch chuẩn.",
+  "minutes": 20,
   "sections": [
     {
-      "id": "trong-tam",
-      "emoji": "💡",
-      "heading": "1. Kiến thức trọng tâm cần nhớ",
+      "id": "tong-ket-c3",
+      "emoji": "🌟",
+      "heading": "1. Tổng kết thống kê ghép nhóm",
       "blocks": [
         {
           "kind": "cards",
-          "tone": "sea",
+          "tone": "gold",
           "items": [
             {
               "emoji": "📌",
-              "title": "Khái niệm cốt lõi",
-              "text": "Nắm vững định nghĩa, ý nghĩa hình học và giải tích của Bài tập cuối chương III."
+              "title": "Đo xu thế trung tâm",
+              "text": "Số trung bình $\\bar{x}$, Trung vị $M_e = Q_2$, Mốt $M_o$."
             },
             {
-              "emoji": "⚡",
-              "title": "Công thức then chốt",
-              "text": "Ghi nhớ chính xác công thức và các trường hợp ngoại lệ/điều kiện đi kèm."
-            },
-            {
-              "emoji": "🎯",
-              "title": "Kỹ năng giải bài",
-              "text": "Phân loại các dạng toán thường gặp từ nhận biết đến vận dụng cao."
+              "emoji": "📌",
+              "title": "Đo độ phân tán",
+              "text": "Khoảng biến thiên $R$, Khoảng tứ phân vị $\\Delta_Q$, Phương sai $s^2$, Độ lệch chuẩn $s$."
             }
           ]
-        },
-        {
-          "kind": "mathBox",
-          "title": "Công thức trọng tâm",
-          "formula": "\\text{Tổng ôn kiến thức & rèn luyện kỹ năng giải nhanh trắc nghiệm, đúng/sai, tự luận}",
-          "note": "Học sinh cần nắm chắc điều kiện áp dụng của công thức."
-        }
-      ]
-    },
-    {
-      "id": "phuong-phap-giai",
-      "emoji": "🛠️",
-      "heading": "2. Phương pháp giải & Chú ý sai lầm thường gặp",
-      "blocks": [
-        {
-          "kind": "steps",
-          "items": [
-            {
-              "label": "Bước 1",
-              "title": "Phân tích đề",
-              "text": "Xác định rõ dữ kiện bài toán và điều kiện ràng buộc."
-            },
-            {
-              "label": "Bước 2",
-              "title": "Thiết lập phương trình / biểu thức",
-              "text": "Chuyển ngôn ngữ đề bài sang biểu thức toán học chính xác."
-            },
-            {
-              "label": "Bước 3",
-              "title": "Giải và biện luận",
-              "text": "Tính toán cẩn thận, loại trừ nghiệm không thoả mãn."
-            }
-          ]
-        },
-        {
-          "kind": "warn",
-          "title": "Bẫy thường gặp",
-          "text": "Quên tìm điều kiện xác định hoặc nhầm lẫn giữa các khái niệm tương tự nhau trong đề thi."
         }
       ]
     }
   ],
   "summary": [
-    "Nắm vững các khái niệm và công thức cốt lõi của Bài tập cuối chương III.",
-    "Lưu ý điều kiện xác định và cạm bẫy toán học thường gặp.",
-    "Luyện tập thành thạo 3 dạng: Trắc nghiệm 4 lựa chọn, Đúng/Sai và Trả lời ngắn."
+    "Nắm vững ý nghĩa thực tiễn của từng số đặc trưng thống kê.",
+    "Phân biệt rõ bài toán so sánh chất lượng giữa 2 mẫu số liệu (nhóm có độ lệch chuẩn nhỏ hơn thì đồng đều hơn)."
   ]
 };
 

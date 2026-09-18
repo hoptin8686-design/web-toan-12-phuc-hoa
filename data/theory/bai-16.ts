@@ -1,80 +1,33 @@
 import type { LessonTheory } from "@/lib/types";
 
 const bai16: LessonTheory = {
-  "intro": "Công thức tính góc trong không gian Oxyz: góc giữa hai đường thẳng, góc giữa đường thẳng và mặt phẳng, góc giữa hai mặt phẳng.",
+  "intro": "Công thức tính khoảng cách từ điểm đến mặt phẳng và công thức tính góc giữa hai đường thẳng, đường thẳng với mặt phẳng, hai mặt phẳng.",
   "minutes": 15,
   "sections": [
     {
-      "id": "trong-tam",
-      "emoji": "💡",
-      "heading": "1. Kiến thức trọng tâm cần nhớ",
+      "id": "khoang-cach-goc",
+      "emoji": "📐",
+      "heading": "1. Khoảng cách và Góc trong không gian Oxyz",
       "blocks": [
         {
-          "kind": "cards",
-          "tone": "sea",
-          "items": [
-            {
-              "emoji": "📌",
-              "title": "Khái niệm cốt lõi",
-              "text": "Nắm vững định nghĩa, ý nghĩa hình học và giải tích của Bài 16. Công thức tính góc trong không gian."
-            },
-            {
-              "emoji": "⚡",
-              "title": "Công thức then chốt",
-              "text": "Ghi nhớ chính xác công thức và các trường hợp ngoại lệ/điều kiện đi kèm."
-            },
-            {
-              "emoji": "🎯",
-              "title": "Kỹ năng giải bài",
-              "text": "Phân loại các dạng toán thường gặp từ nhận biết đến vận dụng cao."
-            }
-          ]
+          "kind": "mathBox",
+          "title": "Khoảng cách từ điểm $M_0(x_0; y_0; z_0)$ đến mặt phẳng $(\\alpha): Ax+By+Cz+D=0$",
+          "formula": "d(M_0, (\\alpha)) = \\frac{|A x_0 + B y_0 + C z_0 + D|}{\\sqrt{A^2 + B^2 + C^2}}",
+          "note": "Công thức khoảng cách luôn có dấu giá trị tuyệt đối ở tử số và căn bậc hai ở mẫu số."
         },
         {
           "kind": "mathBox",
-          "title": "Công thức trọng tâm",
-          "formula": "\\cos(d_1, d_2) = \\frac{|\\vec{u}_1 \\cdot \\vec{u}_2|}{|\\vec{u}_1| |\\vec{u}_2|}, \\quad \\sin(d, P) = \\frac{|\\vec{u} \\cdot \\vec{n}|}{|\\vec{u}| |\\vec{n}|}, \\quad \\cos(P, Q) = \\frac{|\\vec{n}_1 \\cdot \\vec{n}_2|}{|\\vec{n}_1| |\\vec{n}_2|}",
-          "note": "Học sinh cần nắm chắc điều kiện áp dụng của công thức."
-        }
-      ]
-    },
-    {
-      "id": "phuong-phap-giai",
-      "emoji": "🛠️",
-      "heading": "2. Phương pháp giải & Chú ý sai lầm thường gặp",
-      "blocks": [
-        {
-          "kind": "steps",
-          "items": [
-            {
-              "label": "Bước 1",
-              "title": "Phân tích đề",
-              "text": "Xác định rõ dữ kiện bài toán và điều kiện ràng buộc."
-            },
-            {
-              "label": "Bước 2",
-              "title": "Thiết lập phương trình / biểu thức",
-              "text": "Chuyển ngôn ngữ đề bài sang biểu thức toán học chính xác."
-            },
-            {
-              "label": "Bước 3",
-              "title": "Giải và biện luận",
-              "text": "Tính toán cẩn thận, loại trừ nghiệm không thoả mãn."
-            }
-          ]
-        },
-        {
-          "kind": "warn",
-          "title": "Bẫy thường gặp",
-          "text": "Quên tìm điều kiện xác định hoặc nhầm lẫn giữa các khái niệm tương tự nhau trong đề thi."
+          "title": "Công thức tính các góc trong không gian",
+          "formula": "\\cos(d_1, d_2) = \\frac{|\\vec{u}_1 \\cdot \\vec{u}_2|}{|\\vec{u}_1| |\\vec{u}_2|}; \\quad \\cos((\\alpha), (\\beta)) = \\frac{|\\vec{n}_1 \\cdot \\vec{n}_2|}{|\\vec{n}_1| |\\vec{n}_2|}; \\quad \\sin(d, (\\alpha)) = \\frac{|\\vec{u} \\cdot \\vec{n}|}{|\\vec{u}| |\\vec{n}|}",
+          "note": "Đặc biệt chú ý: Góc giữa ĐƯỜNG THẲNG và MẶT PHẲNG dùng hàm SIN, trong khi hai góc còn lại dùng hàm COS!"
         }
       ]
     }
   ],
   "summary": [
-    "Nắm vững các khái niệm và công thức cốt lõi của Bài 16. Công thức tính góc trong không gian.",
-    "Lưu ý điều kiện xác định và cạm bẫy toán học thường gặp.",
-    "Luyện tập thành thạo 3 dạng: Trắc nghiệm 4 lựa chọn, Đúng/Sai và Trả lời ngắn."
+    "Góc trong không gian luôn nằm trong đoạn $[0^\\circ; 90^\\circ]$ nên cos và sin luôn không âm (có trị tuyệt đối ở tử).",
+    "Đường thẳng và mặt phẳng: dùng $\\sin \\varphi = \\frac{|\\vec{u} \\cdot \\vec{n}|}{|\\vec{u}| |\\vec{n}|}$.",
+    "Khoảng cách từ điểm đến mặt phẳng là công cụ nền tảng để viết phương trình mặt cầu tiếp xúc."
   ]
 };
 

@@ -1,80 +1,48 @@
 import type { LessonTheory } from "@/lib/types";
 
 const bai07: LessonTheory = {
-  "intro": "Hệ toạ độ Descartes Oxyz trong không gian: toạ độ của điểm, toạ độ của vectơ và các mặt phẳng toạ độ.",
+  "intro": "Hệ toạ độ Descartes vuông góc $Oxyz$ trong không gian: toạ độ điểm, toạ độ vectơ và các mặt phẳng toạ độ.",
   "minutes": 15,
   "sections": [
     {
-      "id": "trong-tam",
-      "emoji": "💡",
-      "heading": "1. Kiến thức trọng tâm cần nhớ",
+      "id": "he-toa-do",
+      "emoji": "🌐",
+      "heading": "1. Hệ toạ độ Oxyz và toạ độ điểm",
       "blocks": [
         {
+          "kind": "mathBox",
+          "title": "Biểu diễn điểm và vectơ trong không gian Oxyz",
+          "formula": "M(x; y; z) \\iff \\overrightarrow{OM} = x\\vec{i} + y\\vec{j} + z\\vec{k}; \\qquad \\overrightarrow{AB} = (x_B - x_A; y_B - y_A; z_B - z_A)",
+          "note": "Trong đó $\\vec{i} = (1; 0; 0), \\vec{j} = (0; 1; 0), \\vec{k} = (0; 0; 1)$ là các vectơ đơn vị của ba trục $Ox, Oy, Oz$."
+        },
+        {
           "kind": "cards",
-          "tone": "sea",
+          "tone": "leaf",
           "items": [
             {
               "emoji": "📌",
-              "title": "Khái niệm cốt lõi",
-              "text": "Nắm vững định nghĩa, ý nghĩa hình học và giải tích của Bài 7. Hệ trục toạ độ trong không gian."
+              "title": "Trung điểm đoạn thẳng",
+              "text": "$I\\left(\\frac{x_A+x_B}{2}; \\frac{y_A+y_B}{2}; \\frac{z_A+z_B}{2}\\right)$."
             },
             {
-              "emoji": "⚡",
-              "title": "Công thức then chốt",
-              "text": "Ghi nhớ chính xác công thức và các trường hợp ngoại lệ/điều kiện đi kèm."
+              "emoji": "📌",
+              "title": "Trọng tâm tam giác",
+              "text": "$G\\left(\\frac{x_A+x_B+x_C}{3}; \\frac{y_A+y_B+y_C}{3}; \\frac{z_A+z_B+z_C}{3}\\right)$."
             },
             {
-              "emoji": "🎯",
-              "title": "Kỹ năng giải bài",
-              "text": "Phân loại các dạng toán thường gặp từ nhận biết đến vận dụng cao."
+              "emoji": "📌",
+              "title": "Khoảng cách giữa hai điểm",
+              "text": "$AB = |\\overrightarrow{AB}| = \\sqrt{(x_B - x_A)^2 + (y_B - y_A)^2 + (z_B - z_A)^2}$."
             }
           ]
-        },
-        {
-          "kind": "mathBox",
-          "title": "Công thức trọng tâm",
-          "formula": "M(x; y; z) \\iff \\vec{OM} = x\\vec{i} + y\\vec{j} + z\\vec{k}",
-          "note": "Học sinh cần nắm chắc điều kiện áp dụng của công thức."
-        }
-      ]
-    },
-    {
-      "id": "phuong-phap-giai",
-      "emoji": "🛠️",
-      "heading": "2. Phương pháp giải & Chú ý sai lầm thường gặp",
-      "blocks": [
-        {
-          "kind": "steps",
-          "items": [
-            {
-              "label": "Bước 1",
-              "title": "Phân tích đề",
-              "text": "Xác định rõ dữ kiện bài toán và điều kiện ràng buộc."
-            },
-            {
-              "label": "Bước 2",
-              "title": "Thiết lập phương trình / biểu thức",
-              "text": "Chuyển ngôn ngữ đề bài sang biểu thức toán học chính xác."
-            },
-            {
-              "label": "Bước 3",
-              "title": "Giải và biện luận",
-              "text": "Tính toán cẩn thận, loại trừ nghiệm không thoả mãn."
-            }
-          ]
-        },
-        {
-          "kind": "warn",
-          "title": "Bẫy thường gặp",
-          "text": "Quên tìm điều kiện xác định hoặc nhầm lẫn giữa các khái niệm tương tự nhau trong đề thi."
         }
       ]
     }
   ],
   "summary": [
-    "Nắm vững các khái niệm và công thức cốt lõi của Bài 7. Hệ trục toạ độ trong không gian.",
-    "Lưu ý điều kiện xác định và cạm bẫy toán học thường gặp.",
-    "Luyện tập thành thạo 3 dạng: Trắc nghiệm 4 lựa chọn, Đúng/Sai và Trả lời ngắn."
+    "Gốc toạ độ $O(0; 0; 0)$; các mặt phẳng toạ độ: $(Oxy): z = 0$, $(Oyz): x = 0$, $(Oxz): y = 0$.",
+    "Hình chiếu của $M(x; y; z)$ lên $(Oxy)$ là $(x; y; 0)$, lên trục $Oz$ là $(0; 0; z)$.",
+    "Khoảng cách từ $M(x; y; z)$ đến gốc toạ độ là $OM = \\sqrt{x^2 + y^2 + z^2}$."
   ]
 };
 

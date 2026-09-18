@@ -1,80 +1,26 @@
 import type { LessonTheory } from "@/lib/types";
 
 const baicuoic5: LessonTheory = {
-  "intro": "Tổng ôn tập kiến thức trọng tâm, hệ thống hóa công thức và rèn luyện kỹ năng giải bài tập Chương V. Phương pháp toạ độ Oxyz.",
-  "minutes": 15,
+  "intro": "Tổng kết Chương V: Phương pháp toạ độ Oxyz — Mặt phẳng, Đường thẳng, Mặt cầu, Khoảng cách và Góc.",
+  "minutes": 20,
   "sections": [
     {
-      "id": "trong-tam",
-      "emoji": "💡",
-      "heading": "1. Kiến thức trọng tâm cần nhớ",
+      "id": "tong-ket-c5",
+      "emoji": "🌟",
+      "heading": "1. Hệ thống công thức Hình học Oxyz",
       "blocks": [
-        {
-          "kind": "cards",
-          "tone": "sea",
-          "items": [
-            {
-              "emoji": "📌",
-              "title": "Khái niệm cốt lõi",
-              "text": "Nắm vững định nghĩa, ý nghĩa hình học và giải tích của Bài tập cuối chương V."
-            },
-            {
-              "emoji": "⚡",
-              "title": "Công thức then chốt",
-              "text": "Ghi nhớ chính xác công thức và các trường hợp ngoại lệ/điều kiện đi kèm."
-            },
-            {
-              "emoji": "🎯",
-              "title": "Kỹ năng giải bài",
-              "text": "Phân loại các dạng toán thường gặp từ nhận biết đến vận dụng cao."
-            }
-          ]
-        },
         {
           "kind": "mathBox",
-          "title": "Công thức trọng tâm",
-          "formula": "\\text{Tổng ôn kiến thức & rèn luyện kỹ năng giải nhanh trắc nghiệm, đúng/sai, tự luận}",
-          "note": "Học sinh cần nắm chắc điều kiện áp dụng của công thức."
-        }
-      ]
-    },
-    {
-      "id": "phuong-phap-giai",
-      "emoji": "🛠️",
-      "heading": "2. Phương pháp giải & Chú ý sai lầm thường gặp",
-      "blocks": [
-        {
-          "kind": "steps",
-          "items": [
-            {
-              "label": "Bước 1",
-              "title": "Phân tích đề",
-              "text": "Xác định rõ dữ kiện bài toán và điều kiện ràng buộc."
-            },
-            {
-              "label": "Bước 2",
-              "title": "Thiết lập phương trình / biểu thức",
-              "text": "Chuyển ngôn ngữ đề bài sang biểu thức toán học chính xác."
-            },
-            {
-              "label": "Bước 3",
-              "title": "Giải và biện luận",
-              "text": "Tính toán cẩn thận, loại trừ nghiệm không thoả mãn."
-            }
-          ]
-        },
-        {
-          "kind": "warn",
-          "title": "Bẫy thường gặp",
-          "text": "Quên tìm điều kiện xác định hoặc nhầm lẫn giữa các khái niệm tương tự nhau trong đề thi."
+          "title": "Bộ tứ công thức toạ độ Oxyz then chốt",
+          "formula": "(\\alpha): Ax+By+Cz+D=0; \\quad d: \\frac{x-x_0}{a}=\\frac{y-y_0}{b}=\\frac{z-z_0}{c}; \\quad (S): (x-a)^2+(y-b)^2+(z-c)^2=R^2; \\quad d(M, (\\alpha)) = \\frac{|Ax_0+By_0+Cz_0+D|}{\\sqrt{A^2+B^2+C^2}}",
+          "note": "Nắm vững kỹ năng lập phương trình hình học và xác định toạ độ giao điểm."
         }
       ]
     }
   ],
   "summary": [
-    "Nắm vững các khái niệm và công thức cốt lõi của Bài tập cuối chương V.",
-    "Lưu ý điều kiện xác định và cạm bẫy toán học thường gặp.",
-    "Luyện tập thành thạo 3 dạng: Trắc nghiệm 4 lựa chọn, Đúng/Sai và Trả lời ngắn."
+    "Mặt phẳng gắn liền với vectơ pháp tuyến $\\vec{n}$; Đường thẳng gắn liền với vectơ chỉ phương $\\vec{u}$.",
+    "Góc giữa đường thẳng và mặt phẳng dùng hàm SIN; khoảng cách dùng công thức trị tuyệt đối."
   ]
 };
 

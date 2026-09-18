@@ -1,80 +1,47 @@
 import type { LessonTheory } from "@/lib/types";
 
 const bai04: LessonTheory = {
-  "intro": "Sơ đồ tổng quát khảo sát sự biến thiên và vẽ đồ thị hàm số (bậc ba, phân thức hữu tỉ).",
+  "intro": "Sơ đồ khảo sát sự biến thiên và vẽ đồ thị hàm bậc ba $y = ax^3+bx^2+cx+d$ và hàm phân thức hữu tỉ.",
   "minutes": 15,
   "sections": [
     {
-      "id": "trong-tam",
-      "emoji": "💡",
-      "heading": "1. Kiến thức trọng tâm cần nhớ",
-      "blocks": [
-        {
-          "kind": "cards",
-          "tone": "sea",
-          "items": [
-            {
-              "emoji": "📌",
-              "title": "Khái niệm cốt lõi",
-              "text": "Nắm vững định nghĩa, ý nghĩa hình học và giải tích của Bài 4. Khảo sát sự biến thiên và vẽ đồ thị của hàm số."
-            },
-            {
-              "emoji": "⚡",
-              "title": "Công thức then chốt",
-              "text": "Ghi nhớ chính xác công thức và các trường hợp ngoại lệ/điều kiện đi kèm."
-            },
-            {
-              "emoji": "🎯",
-              "title": "Kỹ năng giải bài",
-              "text": "Phân loại các dạng toán thường gặp từ nhận biết đến vận dụng cao."
-            }
-          ]
-        },
-        {
-          "kind": "mathBox",
-          "title": "Công thức trọng tâm",
-          "formula": "y = ax^3 + bx^2 + cx + d \\quad (a \\ne 0) \\quad \\text{hoặc} \\quad y = \\frac{ax+b}{cx+d} \\quad (ad - bc \\ne 0)",
-          "note": "Học sinh cần nắm chắc điều kiện áp dụng của công thức."
-        }
-      ]
-    },
-    {
-      "id": "phuong-phap-giai",
-      "emoji": "🛠️",
-      "heading": "2. Phương pháp giải & Chú ý sai lầm thường gặp",
+      "id": "khao-sat",
+      "emoji": "📊",
+      "heading": "1. Sơ đồ khảo sát chuẩn",
       "blocks": [
         {
           "kind": "steps",
           "items": [
             {
               "label": "Bước 1",
-              "title": "Phân tích đề",
-              "text": "Xác định rõ dữ kiện bài toán và điều kiện ràng buộc."
+              "title": "Tập xác định",
+              "text": "Tìm tập xác định $D$ của hàm số."
             },
             {
               "label": "Bước 2",
-              "title": "Thiết lập phương trình / biểu thức",
-              "text": "Chuyển ngôn ngữ đề bài sang biểu thức toán học chính xác."
+              "title": "Sự biến thiên",
+              "text": "Tính $y'$, tìm cực trị, tính giới hạn và tiệm cận, lập bảng biến thiên hoàn chỉnh."
             },
             {
               "label": "Bước 3",
-              "title": "Giải và biện luận",
-              "text": "Tính toán cẩn thận, loại trừ nghiệm không thoả mãn."
+              "title": "Vẽ đồ thị",
+              "text": "Xác định giao điểm với trục toạ độ, tâm đối xứng, vẽ tiệm cận rồi nối các điểm đặc biệt."
             }
           ]
         },
         {
-          "kind": "warn",
-          "title": "Bẫy thường gặp",
-          "text": "Quên tìm điều kiện xác định hoặc nhầm lẫn giữa các khái niệm tương tự nhau trong đề thi."
+          "kind": "mathBox",
+          "title": "Tâm đối xứng của đồ thị",
+          "formula": "y = ax^3+bx^2+cx+d \\implies I\\left(-\\frac{b}{3a}; y_I\\right) \\text{ (điểm uốn)}; \\quad y = \\frac{ax+b}{cx+d} \\implies I\\left(-\\frac{d}{c}; \\frac{a}{c}\\right)",
+          "note": "Đồ thị hàm bậc ba luôn nhận điểm uốn làm tâm đối xứng; hàm phân thức nhận giao điểm 2 tiệm cận làm tâm đối xứng."
         }
       ]
     }
   ],
   "summary": [
-    "Nắm vững các khái niệm và công thức cốt lõi của Bài 4. Khảo sát sự biến thiên và vẽ đồ thị của hàm số.",
-    "Lưu ý điều kiện xác định và cạm bẫy toán học thường gặp.",
-    "Luyện tập thành thạo 3 dạng: Trắc nghiệm 4 lựa chọn, Đúng/Sai và Trả lời ngắn."
+    "Hệ số $a > 0$: nhánh ngoài cùng bên phải của đồ thị hướng lên trên.",
+    "Hàm bậc ba có 2 cực trị khi phương trình $y' = 0$ có 2 nghiệm phân biệt.",
+    "Hàm bậc nhất/bậc nhất không có cực trị, luôn đồng biến hoặc luôn nghịch biến trên từng khoảng xác định."
   ]
 };
 

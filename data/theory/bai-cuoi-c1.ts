@@ -1,80 +1,26 @@
 import type { LessonTheory } from "@/lib/types";
 
 const baicuoic1: LessonTheory = {
-  "intro": "Tổng ôn tập kiến thức trọng tâm, hệ thống hóa công thức và rèn luyện kỹ năng giải bài tập Chương I. Ứng dụng đạo hàm.",
-  "minutes": 15,
+  "intro": "Hệ thống hóa toàn bộ kiến thức Ứng dụng đạo hàm: Đơn điệu, Cực trị, Max/Min, Tiệm cận và Khảo sát hàm số.",
+  "minutes": 20,
   "sections": [
     {
-      "id": "trong-tam",
-      "emoji": "💡",
-      "heading": "1. Kiến thức trọng tâm cần nhớ",
+      "id": "tong-hop",
+      "emoji": "🌟",
+      "heading": "1. Tổng kết kiến thức Chương I",
       "blocks": [
-        {
-          "kind": "cards",
-          "tone": "sea",
-          "items": [
-            {
-              "emoji": "📌",
-              "title": "Khái niệm cốt lõi",
-              "text": "Nắm vững định nghĩa, ý nghĩa hình học và giải tích của Bài tập cuối chương I."
-            },
-            {
-              "emoji": "⚡",
-              "title": "Công thức then chốt",
-              "text": "Ghi nhớ chính xác công thức và các trường hợp ngoại lệ/điều kiện đi kèm."
-            },
-            {
-              "emoji": "🎯",
-              "title": "Kỹ năng giải bài",
-              "text": "Phân loại các dạng toán thường gặp từ nhận biết đến vận dụng cao."
-            }
-          ]
-        },
         {
           "kind": "mathBox",
-          "title": "Công thức trọng tâm",
-          "formula": "\\text{Tổng ôn kiến thức & rèn luyện kỹ năng giải nhanh trắc nghiệm, đúng/sai, tự luận}",
-          "note": "Học sinh cần nắm chắc điều kiện áp dụng của công thức."
-        }
-      ]
-    },
-    {
-      "id": "phuong-phap-giai",
-      "emoji": "🛠️",
-      "heading": "2. Phương pháp giải & Chú ý sai lầm thường gặp",
-      "blocks": [
-        {
-          "kind": "steps",
-          "items": [
-            {
-              "label": "Bước 1",
-              "title": "Phân tích đề",
-              "text": "Xác định rõ dữ kiện bài toán và điều kiện ràng buộc."
-            },
-            {
-              "label": "Bước 2",
-              "title": "Thiết lập phương trình / biểu thức",
-              "text": "Chuyển ngôn ngữ đề bài sang biểu thức toán học chính xác."
-            },
-            {
-              "label": "Bước 3",
-              "title": "Giải và biện luận",
-              "text": "Tính toán cẩn thận, loại trừ nghiệm không thoả mãn."
-            }
-          ]
-        },
-        {
-          "kind": "warn",
-          "title": "Bẫy thường gặp",
-          "text": "Quên tìm điều kiện xác định hoặc nhầm lẫn giữa các khái niệm tương tự nhau trong đề thi."
+          "title": "Bộ công thức giải tích then chốt",
+          "formula": "f'(x) \\ge 0 \\iff \\text{Đồng biến}; \\quad \\begin{cases} f'(x_0) = 0 \\\\ f''(x_0) < 0 \\end{cases} \\implies \\text{Cực đại}; \\quad y = ax+b \\text{ (Tiệm cận xiên)}",
+          "note": "Nắm vững kỹ năng đọc đồ thị và bảng biến thiên để làm tốt phần trắc nghiệm Đúng/Sai."
         }
       ]
     }
   ],
   "summary": [
-    "Nắm vững các khái niệm và công thức cốt lõi của Bài tập cuối chương I.",
-    "Lưu ý điều kiện xác định và cạm bẫy toán học thường gặp.",
-    "Luyện tập thành thạo 3 dạng: Trắc nghiệm 4 lựa chọn, Đúng/Sai và Trả lời ngắn."
+    "Thành thạo khảo sát 3 dạng hàm: bậc ba, phân thức bậc 1/bậc 1, phân thức bậc 2/bậc 1.",
+    "Vận dụng tốt quy tắc tìm GTLN, GTNN và giải bài toán thực tế tối ưu hóa."
   ]
 };
 

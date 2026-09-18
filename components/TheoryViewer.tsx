@@ -4,6 +4,7 @@ import { useState } from "react";
 import type { LessonTheory, TheoryBlock, Tone } from "@/lib/types";
 import { markTheoryRead } from "@/lib/progress";
 import Diagram from "@/components/theory/Diagram";
+import MathText from "@/components/MathText";
 
 const TONE: Record<Tone, { box: string; title: string }> = {
   sea: { box: "border-sea/30 bg-sea/[0.08]", title: "text-sea-deep" },
@@ -14,28 +15,7 @@ const TONE: Record<Tone, { box: string; title: string }> = {
 };
 
 function Rich({ text }: { text: string }) {
-  const parts = text.split(/(\*\*[^*]+\*\*|\*[^*]+\*)/g);
-  return (
-    <>
-      {parts.map((p, i) => {
-        if (p.startsWith("**") && p.endsWith("**")) {
-          return (
-            <strong key={i} className="font-semibold text-star">
-              {p.slice(2, -2)}
-            </strong>
-          );
-        }
-        if (p.length > 2 && p.startsWith("*") && p.endsWith("*")) {
-          return (
-            <em key={i} className="text-star-soft/90 italic">
-              {p.slice(1, -1)}
-            </em>
-          );
-        }
-        return <span key={i}>{p}</span>;
-      })}
-    </>
-  );
+  return <MathText text={text} />;
 }
 
 function QuickCheck({
@@ -81,7 +61,7 @@ function QuickCheck({
               <span className="font-mono text-xs font-bold opacity-70">
                 {String.fromCharCode(65 + i)}.
               </span>
-              <span className="flex-1">{o}</span>
+              <span className="flex-1"><Rich text={o} /></span>
               {reveal && isRight && <span className="font-bold text-leaf-deep">✓</span>}
               {reveal && chosen && !isRight && <span className="font-bold text-berry">✕</span>}
             </button>
@@ -215,8 +195,8 @@ function RenderBlock({ block }: { block: TheoryBlock }) {
             <span>📐</span>
             <span>{block.title}</span>
           </div>
-          <div className="mt-2 overflow-x-auto rounded-lg bg-[#07131b] p-3 font-mono text-sm font-semibold text-sea-deep whitespace-pre-line">
-            {block.formula}
+          <div className="mt-2 overflow-x-auto rounded-lg bg-[#07131b] p-3 text-sm font-semibold text-sea-deep">
+            <MathText text={block.formula} block={true} />
           </div>
           {block.note && (
             <p className="mt-2 text-xs text-star-soft leading-relaxed">

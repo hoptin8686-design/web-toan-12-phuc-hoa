@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import type { EssayQuestion } from "@/lib/types";
+import MathText from "@/components/MathText";
 
 export default function EssayViewer({
   lessonTitle,
@@ -65,12 +66,12 @@ export default function EssayViewer({
               </div>
 
               <h3 className="mt-3 font-display text-base sm:text-lg font-semibold leading-relaxed text-star">
-                {q.q}
+                <MathText text={q.q} />
               </h3>
 
               {q.math && (
-                <div className="mt-3 overflow-x-auto rounded-xl border border-star/10 bg-[#07131b] p-3 font-mono text-xs sm:text-sm text-sea-deep">
-                  {q.math}
+                <div className="mt-3 overflow-x-auto rounded-xl border border-star/10 bg-[#07131b] p-3 text-xs sm:text-sm text-sea-deep">
+                  <MathText text={q.math} block={true} />
                 </div>
               )}
 
@@ -113,7 +114,7 @@ export default function EssayViewer({
                     <span>Lời giải chuẩn & Hướng dẫn lập luận:</span>
                   </div>
                   <div className="mt-2 whitespace-pre-wrap font-sans text-xs sm:text-sm leading-relaxed text-star">
-                    {q.answer}
+                    <MathText text={q.answer} />
                   </div>
                 </div>
               )}

@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import confetti from "canvas-confetti";
 import type { Question } from "@/lib/types";
 import { saveLessonProgress, recordQuestionAnswer } from "@/lib/progress";
+import MathText from "@/components/MathText";
 
 function shuffleArray<T>(arr: T[]): T[] {
   const copy = [...arr];
@@ -162,12 +163,12 @@ export default function QuizClient({
             </div>
 
             <h3 className="mt-3 font-display text-lg sm:text-xl font-bold leading-snug text-star">
-              {currentQ.q}
+              <MathText text={currentQ.q} />
             </h3>
 
             {currentQ.math && (
-              <div className="mt-3 overflow-x-auto rounded-xl border border-star/10 bg-[#07131b] p-3.5 font-mono text-xs sm:text-sm text-sea-deep">
-                {currentQ.math}
+              <div className="mt-3 overflow-x-auto rounded-xl border border-star/10 bg-[#07131b] p-3.5 text-xs sm:text-sm text-sea-deep">
+                <MathText text={currentQ.math} block={true} />
               </div>
             )}
 
@@ -208,7 +209,7 @@ export default function QuizClient({
                       {String.fromCharCode(65 + i)}
                     </span>
                     <span className="flex-1 text-[15px] sm:text-base leading-relaxed">
-                      {opt}
+                      <MathText text={opt} />
                     </span>
                     {isRevealed && isCorrect && (
                       <span className="shrink-0 text-xl font-bold text-leaf-deep">✓</span>
@@ -231,9 +232,9 @@ export default function QuizClient({
                     <span className="text-coral">💡 Phân tích đáp án:</span>
                   )}
                 </p>
-                <p className="mt-1.5 text-xs sm:text-sm leading-relaxed text-star-soft">
-                  {currentQ.explain}
-                </p>
+                <div className="mt-1.5 text-xs sm:text-sm leading-relaxed text-star-soft">
+                  <MathText text={currentQ.explain} />
+                </div>
                 <div className="mt-4 flex justify-end">
                   <button
                     onClick={handleNext}

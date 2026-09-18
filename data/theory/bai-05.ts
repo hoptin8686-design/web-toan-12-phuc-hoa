@@ -1,80 +1,48 @@
 import type { LessonTheory } from "@/lib/types";
 
 const bai05: LessonTheory = {
-  "intro": "Ứng dụng đạo hàm giải quyết các bài toán thực tế: tối ưu hóa chi phí, dung tích, thời gian, doanh thu biên.",
+  "intro": "Ứng dụng đạo hàm giải các bài toán thực tế: tối ưu hóa chi phí, doanh thu, lợi nhuận và hình học vật liệu.",
   "minutes": 15,
   "sections": [
     {
-      "id": "trong-tam",
-      "emoji": "💡",
-      "heading": "1. Kiến thức trọng tâm cần nhớ",
+      "id": "kinh-te",
+      "emoji": "💼",
+      "heading": "1. Các đại lượng kinh tế vi mô",
       "blocks": [
         {
           "kind": "cards",
-          "tone": "sea",
+          "tone": "gold",
           "items": [
             {
-              "emoji": "📌",
-              "title": "Khái niệm cốt lõi",
-              "text": "Nắm vững định nghĩa, ý nghĩa hình học và giải tích của Bài 5. Ứng dụng đạo hàm để giải quyết một số vấn đề thực tiễn."
+              "emoji": "🏭",
+              "title": "Chi phí biên $C'(x)$",
+              "text": "Chi phí để sản xuất thêm 1 đơn vị sản phẩm tiếp theo: $C'(x) \\approx C(x+1) - C(x)$."
             },
             {
-              "emoji": "⚡",
-              "title": "Công thức then chốt",
-              "text": "Ghi nhớ chính xác công thức và các trường hợp ngoại lệ/điều kiện đi kèm."
+              "emoji": "💵",
+              "title": "Doanh thu biên $R'(x)$",
+              "text": "Doanh thu tăng thêm khi bán thêm 1 đơn vị: $R(x) = x \\cdot p(x)$."
             },
             {
-              "emoji": "🎯",
-              "title": "Kỹ năng giải bài",
-              "text": "Phân loại các dạng toán thường gặp từ nhận biết đến vận dụng cao."
+              "emoji": "📈",
+              "title": "Lợi nhuận tối đa",
+              "text": "Lợi nhuận $P(x) = R(x) - C(x)$. Lợi nhuận cực đại khi $P'(x) = 0 \\iff R'(x) = C'(x)$."
             }
           ]
         },
         {
           "kind": "mathBox",
-          "title": "Công thức trọng tâm",
-          "formula": "\\text{Lợi nhuận: } P(x) = R(x) - C(x) \\implies P'(x) = 0 \\iff R'(x) = C'(x) \\text{ (Doanh thu biên = Chi phí biên)}",
-          "note": "Học sinh cần nắm chắc điều kiện áp dụng của công thức."
-        }
-      ]
-    },
-    {
-      "id": "phuong-phap-giai",
-      "emoji": "🛠️",
-      "heading": "2. Phương pháp giải & Chú ý sai lầm thường gặp",
-      "blocks": [
-        {
-          "kind": "steps",
-          "items": [
-            {
-              "label": "Bước 1",
-              "title": "Phân tích đề",
-              "text": "Xác định rõ dữ kiện bài toán và điều kiện ràng buộc."
-            },
-            {
-              "label": "Bước 2",
-              "title": "Thiết lập phương trình / biểu thức",
-              "text": "Chuyển ngôn ngữ đề bài sang biểu thức toán học chính xác."
-            },
-            {
-              "label": "Bước 3",
-              "title": "Giải và biện luận",
-              "text": "Tính toán cẩn thận, loại trừ nghiệm không thoả mãn."
-            }
-          ]
-        },
-        {
-          "kind": "warn",
-          "title": "Bẫy thường gặp",
-          "text": "Quên tìm điều kiện xác định hoặc nhầm lẫn giữa các khái niệm tương tự nhau trong đề thi."
+          "title": "Nguyên lý tối ưu hóa kinh tế",
+          "formula": "P'(x) = 0 \\iff R'(x) = C'(x) \\quad (\\text{Doanh thu biên bằng Chi phí biên})",
+          "note": "Điểm sản xuất tối ưu mang lại lợi nhuận cao nhất cho doanh nghiệp."
         }
       ]
     }
   ],
   "summary": [
-    "Nắm vững các khái niệm và công thức cốt lõi của Bài 5. Ứng dụng đạo hàm để giải quyết một số vấn đề thực tiễn.",
-    "Lưu ý điều kiện xác định và cạm bẫy toán học thường gặp.",
-    "Luyện tập thành thạo 3 dạng: Trắc nghiệm 4 lựa chọn, Đúng/Sai và Trả lời ngắn."
+    "Đưa bài toán thực tế về bài toán tìm Max/Min của hàm 1 biến $f(x)$ trên khoảng $(0; +\\infty)$.",
+    "Lợi nhuận cực đại khi Doanh thu biên bằng Chi phí biên.",
+    "Luôn chú ý điều kiện biên tự nhiên của biến số (chiều dài $x > 0$, số sản phẩm nguyên dương)."
   ]
 };
 
